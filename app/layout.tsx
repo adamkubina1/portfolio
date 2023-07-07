@@ -1,6 +1,6 @@
 import { Body } from '@/components/layouts/body';
-import { Footer } from '@/components/layouts/footer/footer';
 import { Navbar } from '@/components/layouts/navbar/navbar';
+import LightProvider from '@/components/layouts/providers/themeProvider';
 import './globals.css';
 
 export const metadata = {
@@ -15,11 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
-        <Navbar />
-        <Body>{children}</Body>
-        <Footer />
-      </body>
+      <LightProvider>
+        <body>
+          <Navbar />
+          <Body>{children}</Body>
+        </body>
+      </LightProvider>
     </html>
   );
 }
