@@ -1,6 +1,6 @@
 import { Body } from '@/components/layouts/body';
 import { Navbar } from '@/components/layouts/navbar/navbar';
-import LightProvider from '@/components/layouts/providers/themeProvider';
+import LightProvider from '@/components/providers/themeProvider';
 import './globals.css';
 
 export const metadata = {
@@ -15,12 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <LightProvider>
-        <body>
+      <body>
+        <LightProvider>
           <Navbar />
           <Body>{children}</Body>
-        </body>
-      </LightProvider>
+        </LightProvider>
+      </body>
     </html>
   );
 }

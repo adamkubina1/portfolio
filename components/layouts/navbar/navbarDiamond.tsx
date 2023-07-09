@@ -1,15 +1,24 @@
-'use client';
 import { colorFading } from '@/lib/animations/colorFading';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { NavbarOpenType } from './navbar';
 
-export const NavbarDiamond = () => {
+export const NavbarDiamond = ({ isOpen, setOpen }: NavbarOpenType) => {
   return (
-    <Link href={'/'}>
-      <div className={'w-32 pt-1'}>
+    <div className={'w-32 pt-1'}>
+      <Link
+        href={'/'}
+        className={'md:hidden'}
+        onClick={() => {
+          if (isOpen) setOpen(false);
+        }}
+      >
         <DiamondAnimation />
-      </div>
-    </Link>
+      </Link>
+      <Link href={'/'} className={'max-md:hidden'}>
+        <DiamondAnimation />
+      </Link>
+    </div>
   );
 };
 
@@ -17,16 +26,13 @@ const DiamondAnimation = () => {
   return (
     <motion.div
       style={{
-        width: '50%',
         aspectRatio: '1',
         background: 'black',
         borderRadius: '61% 39% 16% 84% / 57% 72% 28% 43%',
         backgroundImage: colorFading.backgroundImage,
         backgroundSize: '400% 400%',
-        // boxShadow: 'rgba(0, 0, 0, 0.6) 0px 30px 20px -7px;',
-        position: 'relative',
       }}
-      className={'diamondShadowLight dark:diamondShadowDark'}
+      className={'relative w-1/2 diamondShadowLight dark:diamondShadowDark'}
       whileHover={{
         scale: 1.1,
         transition: { duration: 2, ease: 'easeOut' },
@@ -47,6 +53,6 @@ const DiamondAnimation = () => {
         x: { ease: 'easeInOut', duration: 10, repeat: Infinity },
         y: { ease: 'easeInOut', duration: 10, repeat: Infinity },
       }}
-    />
+    ></motion.div>
   );
 };
