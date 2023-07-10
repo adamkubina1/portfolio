@@ -1,4 +1,6 @@
 'use client';
+import moon from '@/public/imgs/moon.svg';
+import sun from '@/public/imgs/sun.svg';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
@@ -46,9 +48,7 @@ const SunIcon = ({ themeSwitch }: { themeSwitch: () => void }) => {
       >
         <Image
           style={{ fill: 'yellow' }}
-          src={'imgs/sun.svg'}
-          width={30}
-          height={30}
+          src={sun}
           alt='Light mode'
           onClick={() => themeSwitch()}
         />
@@ -73,12 +73,7 @@ const MoonIcon = ({ themeSwitch }: { themeSwitch: () => void }) => {
         exit={{ y: 10, opacity: 0 }}
         transition={{ y: { duration: 0.4 }, opacity: { duration: 0.2 } }}
       >
-        <Image
-          src={'imgs/moon.svg'}
-          fill
-          alt='Dark mode'
-          onClick={() => themeSwitch()}
-        />
+        <Image src={moon} alt='Dark mode' onClick={() => themeSwitch()} />
       </motion.div>
     </AnimatePresence>
   );

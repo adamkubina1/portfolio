@@ -12,10 +12,15 @@ export const NavbarDiamond = ({ isOpen, setOpen }: NavbarOpenType) => {
         onClick={() => {
           if (isOpen) setOpen(false);
         }}
+        aria-label={'Home page link'}
       >
         <DiamondAnimation />
       </Link>
-      <Link href={'/'} className={'max-md:hidden'}>
+      <Link
+        href={'/'}
+        className={'max-md:hidden'}
+        aria-label={'Home page link'}
+      >
         <DiamondAnimation />
       </Link>
     </div>
