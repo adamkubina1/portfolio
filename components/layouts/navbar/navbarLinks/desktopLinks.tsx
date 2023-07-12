@@ -1,5 +1,5 @@
+import { navigationLinks } from '@/lib/data';
 import Link from 'next/link';
-import { LINKS } from './navbarLinks';
 
 export const DesktopLinks = ({
   activeLink,
@@ -8,7 +8,7 @@ export const DesktopLinks = ({
 }) => {
   return (
     <ul className={'hidden md:flex items-center'}>
-      {LINKS.map((link, i) => (
+      {navigationLinks.map((link, i) => (
         <li key={i} className={'px-4'}>
           <Link
             href={`/${link}`}

@@ -1,7 +1,7 @@
+import { navigationLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { NavbarOpenType } from '../navbar';
-import { LINKS } from './navbarLinks';
 
 export const MobileLinks = ({
   isOpen,
@@ -44,7 +44,7 @@ const MobileLinksMenu = ({
       transition={{ opacity: { duration: 0.5 } }}
     >
       <ul className={'flex items-center wrap flex-col'}>
-        {LINKS.map((link, i) => (
+        {navigationLinks.map((link, i) => (
           <li key={i} className={'py-4'}>
             <Link
               href={`/${link}`}
