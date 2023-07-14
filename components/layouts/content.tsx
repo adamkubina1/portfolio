@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Body = ({ children }: { children: React.ReactNode }) => {
+export const Content = ({ children }: { children: React.ReactNode }) => {
   return (
     <main
       className={

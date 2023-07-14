@@ -1,13 +1,19 @@
-import { Body } from '@/components/layouts/body';
+import { Content } from '@/components/layouts/content';
 import { Navbar } from '@/components/layouts/navbar/navbar';
 import { SocialsLinks } from '@/components/layouts/socialsLinks';
 import LightProvider from '@/components/providers/themeProvider';
+import { Open_Sans } from 'next/font/google';
 import './globals.css';
 
 export const metadata = {
   title: 'Home',
   description: 'Lorem ipsum',
 };
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-openSans',
+});
 
 export default function RootLayout({
   children,
@@ -16,10 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
+      <body
+        className={`bg-light-base dark:bg-dark-base text-light-text dark:text-dark-text ${openSans.variable} font-sans`}
+      >
         <LightProvider>
           <Navbar />
-          <Body>{children}</Body>
+          <Content>{children}</Content>
           <SocialsLinks />
         </LightProvider>
       </body>
