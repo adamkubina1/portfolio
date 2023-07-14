@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('./lib/style/colors');
+
 module.exports = {
+  plugins: [require('flowbite/plugin')],
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,5 +18,12 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-}
+  theme: {
+    colors: colors,
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-openSans)'],
+      },
+    },
+  },
+};
