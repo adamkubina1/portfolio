@@ -18,7 +18,11 @@ export default function LightProvider({
   }
 
   return (
-    <ThemeProvider attribute={'class'} enableSystem={true}>
+    <ThemeProvider
+      attribute={'class'}
+      enableSystem={false}
+      defaultTheme={'light'}
+    >
       {children}
     </ThemeProvider>
   );
