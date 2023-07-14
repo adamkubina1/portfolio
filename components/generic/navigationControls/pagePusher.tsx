@@ -1,11 +1,10 @@
-import { InternalPageLinkSlashed } from '@/lib/types';
 import Link from 'next/link';
 
 export const PagePusher = ({
   pageHref,
   direction,
 }: {
-  pageHref: InternalPageLinkSlashed;
+  pageHref: string;
   direction: 'left' | 'right';
 }) => {
   return (

@@ -1,4 +1,4 @@
-import { PagePusher } from '@/components/generic/pagePusher';
+import { NavigationControls } from '@/components/generic/navigationControls/navigationControls';
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
 
       <p className={'text-red-700 dark:text-blue-700 '}>My name is Adam </p>
       <p>and I am dev/anything to put here</p>
-      <PagePusher direction={'right'} pageHref={'/about'} />
+      <NavigationControls direction={'right'} rightHref={'/about'} />
     </div>
   );
 }

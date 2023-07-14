@@ -1,5 +1,6 @@
 import { Body } from '@/components/layouts/body';
 import { Navbar } from '@/components/layouts/navbar/navbar';
+import { SocialsLinks } from '@/components/layouts/socialsLinks';
 import LightProvider from '@/components/providers/themeProvider';
 import './globals.css';
 
@@ -19,6 +20,7 @@ export default function RootLayout({
         <LightProvider>
           <Navbar />
           <Body>{children}</Body>
+          <SocialsLinks />
         </LightProvider>
       </body>
     </html>
