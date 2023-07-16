@@ -38,7 +38,5 @@ export const NavigationControls = ({
 };
 
 const NavControlContainer = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className={'fixed bottom-6 md:bottom-10 right-1/4'}>{children}</div>
-  );
+  return <div className={'mt-auto pb-6 md:pb-8'}>{children}</div>;
 };

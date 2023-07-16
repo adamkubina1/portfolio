@@ -8,7 +8,7 @@ const cevicheOne = Ceviche_One({
 
 export default function Home() {
   return (
-    <div className={''}>
+    <>
       <div className={'flex gap-2'}>
         <p className={'text-7xl font-bold'}>Hey! </p>
         <div className={'pt-4 text-2xl'}>
@@ -21,6 +21,6 @@ export default function Home() {
       <p className={'text-2xl'}>and I am</p>
       <p className={'text-4xl'}>developer</p>
       <NavigationControls direction={'right'} rightHref={'/about'} />
-    </div>
+    </>
   );
 }

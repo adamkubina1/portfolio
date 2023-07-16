@@ -1,6 +1,5 @@
 import { Content } from '@/components/layouts/content';
 import { Navbar } from '@/components/layouts/navbar/navbar';
-import { SocialsLinks } from '@/components/layouts/socialsLinks';
 import LightProvider from '@/components/providers/themeProvider';
 import { Open_Sans } from 'next/font/google';
 import './globals.css';
@@ -28,7 +27,6 @@ export default function RootLayout({
         <LightProvider>
           <Navbar />
           <Content>{children}</Content>
-          <SocialsLinks />
         </LightProvider>
       </body>
     </html>

@@ -5,7 +5,7 @@ import { NavbarOpenType } from './navbar';
 
 export const NavbarDiamond = ({ isOpen, setOpen }: NavbarOpenType) => {
   return (
-    <div className={'w-32 pt-1'}>
+    <div className={'w-24 md:w-32 pt-1'}>
       <Link
         href={'/'}
         className={'md:hidden'}
