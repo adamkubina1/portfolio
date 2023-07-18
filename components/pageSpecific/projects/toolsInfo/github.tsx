@@ -1,5 +1,3 @@
-'use client';
-
 //https://github.com/anuraghazra/github-readme-stats
 
 export const Github = () => {
@@ -12,7 +10,7 @@ export const Github = () => {
       <div className='flex justify-start'>
         <img
           alt='stats'
-          src='http://github-readme-streak-stats.herokuapp.com/?user=adamkubina1&theme=transparent&hide_border=true'
+          src='https://github-readme-streak-stats.herokuapp.com/?user=adamkubina1&theme=transparent&hide_border=true'
           className='h-full  '
         />
       </div>

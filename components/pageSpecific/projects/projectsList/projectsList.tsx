@@ -13,7 +13,7 @@ export const ProjectsList = () => {
       <p className='text-xs md:text-sm text-center text-gray-400 w-3/4'>
         Latest projects I have worked on
       </p>
-      <div className='flex flex-col gap-2 items-center'>
+      <div className='flex flex-col gap-2 items-start md:items-center'>
         <ProjectCard
           imgSrc={'/imgs/imgPlaceholder.PNG'}
           imgAlt={'Logo'}
@@ -21,6 +21,7 @@ export const ProjectsList = () => {
           projectDesc={
             'lorem ipsum dolor dasjfoafjdo ofjda osifjoaj fodaij foidjasof'
           }
+          tags={['React', 'Node.js', 'React', 'Node.js']}
         />
         <ProjectCard
           imgSrc={'/imgs/imgPlaceholder.PNG'}
@@ -29,9 +30,13 @@ export const ProjectsList = () => {
           projectDesc={
             'lorem ipsum dolor dasjfoafjdo ofjda osifjoaj fodaij foidjasof'
           }
+          tags={['React', 'Node.js', 'React', 'Node.js']}
         />
         {projectsHidden ? null : <HiddenProjects />}
-        <p onClick={() => setProjectsHidden(!projectsHidden)} className=''>
+        <p
+          onClick={() => setProjectsHidden(!projectsHidden)}
+          className='flex self-center'
+        >
           {projectsHidden ? 'See more' : 'See less'}
         </p>
       </div>

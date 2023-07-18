@@ -11,7 +11,7 @@ export const ProjectCard = ({
   imgAlt: string;
   projectName: string;
   projectDesc?: React.ReactNode;
-  tags?: React.ReactNode;
+  tags?: string[];
 }) => {
   return (
     <div className='flex'>
@@ -29,8 +29,20 @@ export const ProjectCard = ({
         <div className='z-30 -ml-20 bg-gray-100 p-2 rounded-lg w-60 md:w-72'>
           <p className='text-sm'>{projectDesc}</p>
         </div>
-        <div>{tags}</div>
+        <div className='grid grid-cols-4 mt-1 gap-1'>
+          {tags?.map((tag, i) => (
+            <ProjectTag key={i}>{tag}</ProjectTag>
+          ))}
+        </div>
       </div>
     </div>
+  );
+};
+
+const ProjectTag = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <span className='bg-gray-100 text-gray-800 text-xs font-medium px-1 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300'>
+      {children}
+    </span>
   );
 };

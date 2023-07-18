@@ -27,19 +27,35 @@ export const Technologies = () => {
 const Tools = () => {
   return (
     <div className='flex gap-2  flex-wrap justify-center'>
-      <Link href={'https://www.typescriptlang.org/'} target='_blank'>
+      <Link
+        href={'https://www.typescriptlang.org/'}
+        aria-label='Typescript'
+        target='_blank'
+      >
         <SiTypescript className='shadow-sm shadow-black  rounded-full w-10 h-10 text-light-base  dark:text-[#3178c6] bg-[#3178c6] dark:bg-dark-base' />
       </Link>
-      <Link href={'https://nextjs.org/'} target='_blank'>
+      <Link href={'https://nextjs.org/'} aria-label='Next.js' target='_blank'>
         <SiNextdotjs className='shadow-sm shadow-black  dark:text-white bg-black dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
-      <Link href={'https://tailwindcss.com/'} target='_blank'>
+      <Link
+        href={'https://tailwindcss.com/'}
+        aria-label='Tailwind'
+        target='_blank'
+      >
         <SiTailwindcss className='shadow-sm shadow-black  dark:text-[#00b4b6] bg-[#00b4b6] dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
-      <Link href={'https://firebase.google.com/'} target='_blank'>
+      <Link
+        href={'https://firebase.google.com/'}
+        aria-label='Firebase'
+        target='_blank'
+      >
         <SiFirebase className='shadow-sm shadow-black  dark:text-[#FFCA28] bg-[#FFCA28] dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
-      <Link href={'https://www.cypress.io/'} target='_blank'>
+      <Link
+        href={'https://www.cypress.io/'}
+        aria-label='Cypress'
+        target='_blank'
+      >
         <SiCypress className='shadow-sm shadow-black  dark:text-[#4B7B5B] bg-[#4B7B5B] dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
     </div>
