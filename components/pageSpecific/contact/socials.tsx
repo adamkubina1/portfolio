@@ -11,5 +11,10 @@ export const Socials = () => {
 };
 
 const SocialsList = () => {
-  return <></>;
+  return (
+    <>
+      <div>Linkedin</div>
+      <div>Github</div>
+    </>
+  );
 };
