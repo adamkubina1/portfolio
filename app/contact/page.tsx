@@ -10,9 +10,9 @@ export default function Contact() {
   return (
     <>
       <PageHeading heading='Contact' />
-      <div className='flex flex-row w-full justify-center'>
+      <div className='flex flex-row w-full justify-center align-center'>
         <Socials />
-        <div className='w-full'>
+        <div>
           <Status />
           <DownloadCv />
         </div>

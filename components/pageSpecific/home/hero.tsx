@@ -15,7 +15,7 @@ export const Hero = () => {
           <p>name is</p>
         </div>
       </div>
-      <p className={`text-9xl ${cevicheOne.className}`}>Adam</p>
+      <h1 className={`text-9xl ${cevicheOne.className}`}>Adam</h1>
 
       <p className={'text-2xl'}>and I am</p>
       <p className={'text-4xl'}>developer</p>

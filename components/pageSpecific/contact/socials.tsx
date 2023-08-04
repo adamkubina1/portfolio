@@ -1,12 +1,12 @@
+import { Heading } from '@/components/generic/typography/heading';
+
 export const Socials = () => {
   return (
-    <>
-      <h2>Socials</h2>
-      <div className='flex flex-col'>
-        <p>Get in touch with me here</p>
-        <SocialsList />
-      </div>
-    </>
+    <div className='flex flex-col'>
+      <Heading level={1}>Socials</Heading>
+      <p>Get in touch with me here</p>
+      <SocialsList />
+    </div>
   );
 };
 

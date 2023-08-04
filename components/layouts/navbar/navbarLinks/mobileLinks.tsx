@@ -14,7 +14,7 @@ export const MobileLinks = ({
         className={'md:hidden flex items-center hover:cursor-pointer'}
         onClick={() => setOpen(!isOpen)}
       >
-        {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+        <div className='z-50'>{isOpen ? <CloseIcon /> : <HamburgerIcon />}</div>
       </div>
       <AnimatePresence>
         {isOpen ? (
@@ -36,7 +36,7 @@ const MobileLinksMenu = ({
 }: NavbarOpenType & { activeLink: string | undefined }) => {
   return (
     <motion.div
-      className={'absolute mt-24 bg-slate-400 top-0 left-0'}
+      className={'absolute pt-24 top-0 left-0 bg-dark-highlight3'}
       key={'mobilelinks'}
       initial={{ opacity: 0, width: 0, height: 0 }}
       animate={{ opacity: 1, width: '100vw', height: '100vh' }}
