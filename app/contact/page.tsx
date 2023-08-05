@@ -1,6 +1,6 @@
 import { NavigationControls } from '@/components/generic/navigationControls/navigationControls';
-import { PageHeading } from '@/components/generic/pageHeading';
 import { Heading } from '@/components/generic/typography/heading';
+import { PageHeading } from '@/components/generic/typography/pageHeading';
 import { ContactForm } from '@/components/pageSpecific/contact/contactForm';
 import { DownloadCv } from '@/components/pageSpecific/contact/downloadCv';
 import { Socials } from '@/components/pageSpecific/contact/socials';

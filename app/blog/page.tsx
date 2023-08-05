@@ -1,5 +1,5 @@
 import { NavigationControls } from '@/components/generic/navigationControls/navigationControls';
-import { PageHeading } from '@/components/generic/pageHeading';
+import { PageHeading } from '@/components/generic/typography/pageHeading';
 import { WritingInfo } from '@/components/pageSpecific/blog/writingInfo/writingInfo';
 
 export default function Blog() {

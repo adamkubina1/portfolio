@@ -1,5 +1,5 @@
 import { NavigationControls } from '@/components/generic/navigationControls/navigationControls';
-import { PageHeading } from '@/components/generic/pageHeading';
+import { PageHeading } from '@/components/generic/typography/pageHeading';
 import { ProjectsList } from '@/components/pageSpecific/projects/projectsList/projectsList';
 import { ToolsInfo } from '@/components/pageSpecific/projects/toolsInfo/toolsInfo';
 
