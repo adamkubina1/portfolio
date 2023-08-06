@@ -1,4 +1,5 @@
 import { Heading } from '@/components/generic/typography/heading';
+import { Undertext } from '@/components/generic/typography/underText';
 import Link from 'next/link';
 import {
   SiCypress,
@@ -11,12 +12,10 @@ import {
 export const Technologies = () => {
   return (
     <div className='md:self-start md:mt-4 flex flex-col gap-1 items-center'>
-      <Heading level={1} className='max-md:hidden'>
+      <Heading level={2} className='max-md:hidden'>
         Tech stack
       </Heading>
-      <p className='text-xs md:text-sm text-center text-gray-400 w-3/4'>
-        My favorite tools
-      </p>
+      <Undertext>My favorite tools</Undertext>
       <Tools />
       <img
         alt='stats'

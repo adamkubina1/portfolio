@@ -9,6 +9,7 @@ export const colors = {
   'dark-highlight1': '#FF00FF',
   'dark-highlight2': '#FFFF00',
   'dark-highlight3': '#00FFFF',
+  'transparent-tmp': 'rgba(220,220,220,0.95)',
 };
 
 module.exports = colors;

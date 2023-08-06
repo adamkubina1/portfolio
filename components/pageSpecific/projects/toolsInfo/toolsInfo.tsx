@@ -1,4 +1,5 @@
 'use client';
+import { customTabTheme } from '@/lib/style/customTabTheme';
 import { Tabs } from 'flowbite-react';
 import { FaLaptopCode } from 'react-icons/fa';
 import { IoSchoolOutline } from 'react-icons/io5';
@@ -28,6 +29,7 @@ const ToolsInfoMobile = () => {
     <Tabs.Group
       aria-label='Technologies and Github statistics tabs'
       style='default'
+      theme={customTabTheme}
       className='items-center gap-x-4 gap-y-0 mb-2 mt-4 md:hidden'
     >
       <Tabs.Item

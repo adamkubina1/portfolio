@@ -1,6 +1,7 @@
 import { navigationLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
+import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 import { NavbarOpenType } from '../navbar';
 
 export const MobileLinks = ({
@@ -36,14 +37,16 @@ const MobileLinksMenu = ({
 }: NavbarOpenType & { activeLink: string | undefined }) => {
   return (
     <motion.div
-      className={'absolute pt-24 top-0 left-0 bg-dark-highlight3'}
+      className={
+        'absolute top-0 left-0 bg-transparent-tmp flex justify-center pt-32'
+      }
       key={'mobilelinks'}
       initial={{ opacity: 0, width: 0, height: 0 }}
       animate={{ opacity: 1, width: '100vw', height: '100vh' }}
       exit={{ opacity: 0, width: 0, height: 0 }}
       transition={{ opacity: { duration: 0.5 } }}
     >
-      <ul className={'flex items-center wrap flex-col'}>
+      <ul className={'flex items-center wrap flex-col gap-6'}>
         {navigationLinks.map((link, i) => (
           <li key={i} className={'py-4'}>
             <Link
@@ -65,9 +68,9 @@ const MobileLinksMenu = ({
 };
 
 const HamburgerIcon = () => {
-  return <>Open</>;
+  return <RxHamburgerMenu size={20} />;
 };
 
 const CloseIcon = () => {
-  return <>Close</>;
+  return <RxCross1 size={20} />;
 };

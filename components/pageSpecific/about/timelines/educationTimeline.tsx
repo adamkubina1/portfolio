@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { IoSchoolOutline } from 'react-icons/io5';
 
 export const EducationTimeline = () => {
@@ -39,12 +40,22 @@ const TimelineItem = ({
       <p className='mb-1 text-base font-normal text-gray-500 dark:text-gray-400'>
         {degree}
       </p>
-      <Image
-        src={'/imgs/vseLogo.svg'}
-        alt='Vse logo'
-        width={122.84}
-        height={30}
-      />
+      <Link href={'https://fis.vse.cz/'} target='_blank'>
+        <Image
+          src={'/imgs/vseLogo.svg'}
+          className='dark:hidden'
+          alt='Vse logo'
+          width={122.84}
+          height={30}
+        />
+        <Image
+          src={'/imgs/vseLogoDark.svg'}
+          className='hidden dark:block'
+          alt='Vse logo'
+          width={122.84}
+          height={30}
+        />
+      </Link>
       <div className='mt-2 mr-6 md:mr-12'>{badges}</div>
     </li>
   );

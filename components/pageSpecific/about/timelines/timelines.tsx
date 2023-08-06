@@ -1,4 +1,5 @@
 'use client';
+import { customTabTheme } from '@/lib/style/customTabTheme';
 import { Tabs } from 'flowbite-react';
 import { FaLaptopCode } from 'react-icons/fa';
 import { IoSchoolOutline } from 'react-icons/io5';
@@ -9,6 +10,7 @@ export const Timelines = () => {
   return (
     <Tabs.Group
       aria-label='Education and work tabs'
+      theme={customTabTheme}
       style='default'
       className='items-center gap-x-4 gap-y-0 mb-6'
     >

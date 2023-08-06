@@ -1,10 +1,12 @@
 'use client';
 
+import { Undertext } from '@/components/generic/typography/underText';
 import { Button, Label, TextInput, Textarea } from 'flowbite-react';
 
 export const ContactForm = () => {
   return (
-    <form className='flex max-w-md flex-col gap-4'>
+    <form className='flex max-w-md flex-col gap-2'>
+      <Undertext>Or shoot me email directly!</Undertext>
       <EmailField />
       <SubjectField />
       <EmailBodyField />

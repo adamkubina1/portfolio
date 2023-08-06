@@ -1,4 +1,6 @@
 'use client';
+import { Heading } from '@/components/generic/typography/heading';
+import { Undertext } from '@/components/generic/typography/underText';
 import { useState } from 'react';
 import { ProjectCard } from './projectCard';
 
@@ -9,10 +11,8 @@ export const ProjectsList = () => {
 
   return (
     <>
-      <div className='text-xl font-semibold'>Projects</div>
-      <p className='text-xs md:text-sm text-center text-gray-400 w-3/4'>
-        Latest projects I have worked on
-      </p>
+      <Heading level={2}>Projects</Heading>
+      <Undertext>Latest projects I have worked on</Undertext>
       <div className='flex flex-col gap-2 items-start md:items-center'>
         <ProjectCard
           imgSrc={'/imgs/imgPlaceholder.PNG'}

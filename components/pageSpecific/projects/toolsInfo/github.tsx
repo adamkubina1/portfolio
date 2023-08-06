@@ -1,16 +1,15 @@
 //https://github.com/anuraghazra/github-readme-stats
 
 import { Heading } from '@/components/generic/typography/heading';
+import { Undertext } from '@/components/generic/typography/underText';
 
 export const Github = () => {
   return (
     <div className='md:self-start md:mt-4 flex flex-col gap-1 items-center'>
-      <Heading level={1} className='max-md:hidden'>
+      <Heading level={2} className='max-md:hidden'>
         Open sourcing
       </Heading>
-      <p className='text-xs md:text-sm text-center text-gray-400 w-1/2'>
-        My Github stats
-      </p>
+      <Undertext>My Github stats</Undertext>
       <div className='flex justify-start'>
         <img
           alt='stats'
