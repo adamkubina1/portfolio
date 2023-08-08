@@ -1,3 +1,4 @@
+import { Text } from '@/components/generic/typography/text';
 import Image from 'next/image';
 
 export const ProjectCard = ({
@@ -26,10 +27,10 @@ export const ProjectCard = ({
       </div>
       <div className='flex flex-col justify-center items-end'>
         <div className=''>{projectName}</div>
-        <div className='z-30 -ml-20 bg-gray-100 p-2 rounded-lg w-60 md:w-72'>
-          <p className='text-sm'>{projectDesc}</p>
+        <div className='z-30 -ml-20 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg w-60 md:w-72'>
+          <Text className='text-sm'>{projectDesc}</Text>
         </div>
-        <div className='grid grid-cols-4 mt-1 gap-1'>
+        <div className='grid grid-cols-4 mt-1 gap-1 ml-1'>
           {tags?.map((tag, i) => (
             <ProjectTag key={i}>{tag}</ProjectTag>
           ))}

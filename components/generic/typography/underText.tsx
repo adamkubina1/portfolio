@@ -6,9 +6,7 @@ export const Undertext = ({
   className?: string;
 }) => {
   return (
-    <p
-      className={`text-xs md:text-sm text-center text-gray-400 w-3/4 ${className}`}
-    >
+    <p className={`text-xs md:text-sm w-full text-gray-400 ${className}`}>
       {children}
     </p>
   );
