@@ -1,4 +1,4 @@
-import { navigationLinks } from '../../lib/data/index';
+import { navigationLinks } from '../../lib/data/navigationLinks';
 
 describe('Generic tests', () => {
   it('is possible to access all pages of the website', () => {

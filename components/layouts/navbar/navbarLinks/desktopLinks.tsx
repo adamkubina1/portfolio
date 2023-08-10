@@ -1,4 +1,4 @@
-import { navigationLinks } from '@/lib/data';
+import { navigationLinks } from '@/lib/data/navigationLinks';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { LinkHighlighterDark, LinkHighlighterLight } from './linkHighlighter';

@@ -1,6 +1,14 @@
 import { Text } from '@/components/generic/typography/text';
 import Image from 'next/image';
 
+export type ProjectCardType = {
+  imgSrc: string;
+  imgAlt: string;
+  projectName: string;
+  projectDesc?: React.ReactNode;
+  tags?: string[];
+};
+
 export const ProjectCard = ({
   imgSrc,
   imgAlt,

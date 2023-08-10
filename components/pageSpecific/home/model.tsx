@@ -1,4 +1,3 @@
-'use client';
 import { Canvas, MeshProps, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 
