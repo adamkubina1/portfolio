@@ -1,24 +1,21 @@
+'use client';
 import { ShelfVolumes } from '@/lib/types/googleBooksAPI';
 import Image from 'next/image';
 import Link from 'next/link';
+import useSWR from 'swr';
 
-const fetchBookVolumes = async () => {
-  const data = await fetch(
-    `https://www.googleapis.com/books/v1/users/104062055506205789874/bookshelves/3/volumes`,
-    {
-      next: { revalidate: 30 },
-    }
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+export const LatestBook = () => {
+  const { data, error } = useSWR(
+    'https://www.googleapis.com/books/v1/users/104062055506205789874/bookshelves/3/volumes',
+    fetcher
   );
 
-  if (!data.ok) throw new Error('Failed to fetch data');
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <div>Loading...</div>;
 
-  return data.json();
-};
-
-export const LatestBook = async () => {
-  const bookVolumes = (await fetchBookVolumes()) as ShelfVolumes;
-
-  if (bookVolumes.items.length === 0) return null;
+  const bookVolumes = data as ShelfVolumes;
 
   return (
     <div className='flex flex-col items-center'>

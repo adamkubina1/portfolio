@@ -12,17 +12,12 @@ export const DesktopLinks = ({
     <ul className={'hidden md:flex items-center'}>
       {navigationLinks.map((link, i) => (
         <li key={i} className={'px-4'}>
-          <Link
-            href={`/${link}`}
-            className={
-              link === activeLink?.replace('/', '') ? 'text-red-700' : ''
-            }
-          >
+          <Link href={`/${link}`} className={'h-full'}>
             {link === activeLink?.replace('/', '') ? (
-              <>
+              <div className='absolute top-2'>
                 <LinkHighlighterLight />
                 <LinkHighlighterDark />
-              </>
+              </div>
             ) : null}
             {link}
           </Link>
@@ -37,7 +32,7 @@ const LinkHighlighterLight = () => {
     <AnimatePresence>
       <motion.div
         key={'linkHighlighterLight'}
-        className='dark:hidden top-0 relative left-1/2 w-2 h-2 rounded-full bg-yellow-300'
+        className='dark:hidden w-2 h-2 rounded-full bg-yellow-300 mx-auto'
         animate={{
           boxShadow: [
             '0 0 3px 2px rgb(250, 202, 21)',
