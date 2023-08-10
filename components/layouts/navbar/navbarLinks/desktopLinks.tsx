@@ -1,7 +1,7 @@
-'use client';
 import { navigationLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
+import { LinkHighlighterDark, LinkHighlighterLight } from './linkHighlighter';
 
 export const DesktopLinks = ({
   activeLink,
@@ -11,68 +11,44 @@ export const DesktopLinks = ({
   return (
     <ul className={'hidden md:flex items-center'}>
       {navigationLinks.map((link, i) => (
-        <li key={i} className={'px-4'}>
-          <Link href={`/${link}`} className={'h-full'}>
-            {link === activeLink?.replace('/', '') ? (
-              <div className='absolute top-2'>
-                <LinkHighlighterLight />
-                <LinkHighlighterDark />
-              </div>
-            ) : null}
-            {link}
-          </Link>
-        </li>
+        <DesktopLink key={i} activeLink={activeLink} link={link} />
       ))}
     </ul>
   );
 };
 
-const LinkHighlighterLight = () => {
+const DesktopLink = ({
+  activeLink,
+  link,
+}: {
+  activeLink: string | undefined;
+  link: string;
+}) => {
   return (
-    <AnimatePresence>
+    <li className={'px-4 '}>
       <motion.div
-        key={'linkHighlighterLight'}
-        className='dark:hidden w-2 h-2 rounded-full bg-yellow-300 mx-auto'
-        animate={{
-          boxShadow: [
-            '0 0 3px 2px rgb(250, 202, 21)',
-            '0 0 12px 4px rgb(250, 202, 21)',
-            '0 0 3px 2px rgb(250, 202, 21)',
-          ],
-        }}
+        animate={
+          link === activeLink?.replace('/', '')
+            ? { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }
+            : {}
+        }
         transition={{
-          boxShadow: { repeat: Infinity, duration: 2, ease: 'easeInOut' },
-          width: { duration: 3, ease: 'easeIn' },
-          height: { duration: 3, ease: 'easeIn' },
-          opacity: { duration: 3, ease: 'easeIn' },
+          textShadow: { duration: 0.5, ease: 'easeIn' },
+          delay: 0.4,
         }}
-        exit={{ width: 0, height: 0, opacity: 0 }}
-      ></motion.div>
-    </AnimatePresence>
-  );
-};
-
-const LinkHighlighterDark = () => {
-  return (
-    <AnimatePresence>
-      <motion.div
-        key={'linkHighlighterDark'}
-        className='hidden dark:block top-0 relative left-1/2 w-2 h-2 rounded-full bg-yellow-300'
-        animate={{
-          boxShadow: [
-            '0 0 3px 2px rgb(250, 202, 21)',
-            '0 0 12px 4px rgb(250, 202, 21)',
-            '0 0 3px 2px rgb(250, 202, 21)',
-          ],
-        }}
-        transition={{
-          boxShadow: { repeat: Infinity, duration: 2, ease: 'easeInOut' },
-          width: { duration: 3, ease: 'easeIn' },
-          height: { duration: 3, ease: 'easeIn' },
-          opacity: { duration: 3, ease: 'easeIn' },
-        }}
-        exit={{ width: 0, height: 0, opacity: 0 }}
-      ></motion.div>
-    </AnimatePresence>
+      >
+        <Link href={`/${link}`} className={'h-full flex justify-center'}>
+          <AnimatePresence>
+            {link === activeLink?.replace('/', '') ? (
+              <>
+                <LinkHighlighterLight className='absolute top-2' />
+                <LinkHighlighterDark className='absolute top-2' />
+              </>
+            ) : null}
+          </AnimatePresence>
+          {link}
+        </Link>
+      </motion.div>
+    </li>
   );
 };

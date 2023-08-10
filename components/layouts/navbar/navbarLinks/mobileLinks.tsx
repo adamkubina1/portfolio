@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 import { NavbarOpenType } from '../navbar';
+import { LinkHighlighterDark, LinkHighlighterLight } from './linkHighlighter';
 
 export const MobileLinks = ({
   isOpen,
@@ -48,22 +49,56 @@ const MobileLinksMenu = ({
     >
       <ul className={'flex items-center wrap flex-col gap-6'}>
         {navigationLinks.map((link, i) => (
-          <li key={i} className={'py-4'}>
-            <Link
-              href={`/${link}`}
-              onClick={() => {
-                if (isOpen) setOpen(false);
-              }}
-              className={
-                link === activeLink?.replace('/', '') ? 'text-red-700' : ''
-              }
-            >
-              {link}
-            </Link>
-          </li>
+          <MobileLink
+            key={i}
+            activeLink={activeLink}
+            isOpen={isOpen}
+            setOpen={setOpen}
+            link={link}
+          />
         ))}
       </ul>
     </motion.div>
+  );
+};
+
+const MobileLink = ({
+  link,
+  activeLink,
+  isOpen,
+  setOpen,
+}: NavbarOpenType & { activeLink: string | undefined; link: string }) => {
+  return (
+    <li className={'py-4'}>
+      <motion.div
+        animate={
+          link === activeLink?.replace('/', '')
+            ? { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }
+            : {}
+        }
+        transition={{
+          textShadow: { duration: 0.5, ease: 'easeIn' },
+          delay: 0.4,
+        }}
+      >
+        <Link
+          href={`/${link}`}
+          onClick={() => {
+            if (isOpen) setOpen(false);
+          }}
+        >
+          <div>
+            {link === activeLink?.replace('/', '') ? (
+              <>
+                <LinkHighlighterDark />
+                <LinkHighlighterLight />
+              </>
+            ) : null}
+            {link}
+          </div>
+        </Link>
+      </motion.div>
+    </li>
   );
 };
 

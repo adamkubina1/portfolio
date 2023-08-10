@@ -1,19 +1,22 @@
 import { NavigationControls } from '@/components/generic/navigationControls/navigationControls';
 import { PageHeading } from '@/components/generic/typography/pageHeading';
-import { AboutInfo } from '@/components/pageSpecific/about/aboutInfo';
-import { Timelines } from '@/components/pageSpecific/about/timelines/timelines';
+import { PageWrapper } from '@/components/layouts/pageWrapper';
+import { ProjectsList } from '@/components/pageSpecific/projects/projectsList/projectsList';
+import { ToolsInfo } from '@/components/pageSpecific/projects/toolsInfo/toolsInfo';
 
-export default function About() {
+export default function Projects() {
   return (
-    <>
-      <PageHeading heading='ABOUT' />
-      <AboutInfo />
-      <Timelines />
+    <PageWrapper>
+      <PageHeading heading='PROJECTS' />
+
+      <ToolsInfo />
+      <ProjectsList />
+
       <NavigationControls
         direction={'both'}
-        leftHref={'/'}
-        rightHref={'/projects'}
+        leftHref={'/about'}
+        rightHref={'/blog'}
       />
-    </>
+    </PageWrapper>
   );
 }

@@ -1,10 +1,11 @@
 import { NavigationControls } from '@/components/generic/navigationControls/navigationControls';
 import { PageHeading } from '@/components/generic/typography/pageHeading';
+import { PageWrapper } from '@/components/layouts/pageWrapper';
 import { WritingInfo } from '@/components/pageSpecific/blog/writingInfo/writingInfo';
 
 export default function Blog() {
   return (
-    <>
+    <PageWrapper>
       <PageHeading heading='BLOG' />
       <WritingInfo />
       <div>Latest articles</div>
@@ -14,6 +15,6 @@ export default function Blog() {
         leftHref={'/projects'}
         rightHref={'/contact'}
       />
-    </>
+    </PageWrapper>
   );
 }
