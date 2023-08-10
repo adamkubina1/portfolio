@@ -9,7 +9,7 @@ export const Github = () => {
       <Heading level={2} className='max-md:hidden'>
         Open sourcing
       </Heading>
-      <Undertext>My Github stats</Undertext>
+      <Undertext className='text-center'>My Github stats</Undertext>
       <div className='flex justify-start'>
         <img
           alt='stats'

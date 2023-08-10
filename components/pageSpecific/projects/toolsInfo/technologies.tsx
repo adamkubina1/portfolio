@@ -15,7 +15,7 @@ export const Technologies = () => {
       <Heading level={2} className='max-md:hidden'>
         Tech stack
       </Heading>
-      <Undertext>My favorite tools</Undertext>
+      <Undertext className='text-center'>My favorite tools</Undertext>
       <Tools />
       <img
         alt='stats'

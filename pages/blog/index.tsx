@@ -1,5 +1,6 @@
 import { PageHeading } from '@/components/generic/typography/pageHeading';
 import { PageWrapper } from '@/components/layouts/pageWrapper';
+import { LatestArticles } from '@/components/pageSpecific/blog/blogPosts/latestArticles';
 import { WritingInfo } from '@/components/pageSpecific/blog/writingInfo/writingInfo';
 
 export default function Blog() {
@@ -11,8 +12,7 @@ export default function Blog() {
     >
       <PageHeading heading='BLOG' />
       <WritingInfo />
-      <div>Latest articles</div>
-      <div>See more</div>
+      <LatestArticles />
     </PageWrapper>
   );
 }

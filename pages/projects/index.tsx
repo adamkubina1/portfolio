@@ -7,7 +7,6 @@ export default function Projects() {
   return (
     <PageWrapper direction={'both'} leftHref={'/about'} rightHref={'/blog'}>
       <PageHeading heading='PROJECTS' />
-
       <ToolsInfo />
       <ProjectsList />
     </PageWrapper>

@@ -1,4 +1,5 @@
 'use client';
+import { Undertext } from '@/components/generic/typography/underText';
 import { ShelfVolumes } from '@/lib/types/googleBooksAPI';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,13 +19,13 @@ export const LatestBook = () => {
   const bookVolumes = data as ShelfVolumes;
 
   return (
-    <div className='flex flex-col items-center'>
-      <p>Reading rn</p>
+    <div className='flex flex-col items-center max-w-[96px] md:max-w-[128px] ml-1 float-right'>
+      <Undertext className='text-center'>Now reading</Undertext>
       <Link
         href={bookVolumes.items[0].volumeInfo.canonicalVolumeLink}
         target='_blank'
       >
-        <div className='relative w-40 h-40'>
+        <div className='relative w-[96px] h-[125.25px] md:w-[128px] md:h-[167px]'>
           <Image
             src={bookVolumes.items[0].volumeInfo.imageLinks.thumbnail}
             alt={bookVolumes.items[0].volumeInfo.title}
@@ -34,9 +35,6 @@ export const LatestBook = () => {
           />
         </div>
       </Link>
-      <div className='text-sm whitespace-nowrap'>
-        {bookVolumes.items[0].volumeInfo.title}
-      </div>
     </div>
   );
 };

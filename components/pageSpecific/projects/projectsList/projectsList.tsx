@@ -10,7 +10,9 @@ export const ProjectsList = () => {
   return (
     <>
       <Heading level={2}>Projects</Heading>
-      <Undertext>Latest projects I have worked on</Undertext>
+      <Undertext className='text-center'>
+        Latest projects I have worked on
+      </Undertext>
       <div className='flex flex-col gap-2 items-start md:items-center'>
         {projects.slice(0, 2).map((project, i) => (
           <ProjectCard key={i} {...project} />
