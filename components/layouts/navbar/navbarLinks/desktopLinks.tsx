@@ -9,7 +9,7 @@ export const DesktopLinks = ({
   activeLink: string | undefined;
 }) => {
   return (
-    <ul className={'hidden md:flex items-center'}>
+    <ul className={'hidden md:flex items-center border-b '}>
       {navigationLinks.map((link, i) => (
         <DesktopLink key={i} activeLink={activeLink} link={link} />
       ))}
@@ -29,7 +29,7 @@ const DesktopLink = ({
       <motion.div
         animate={
           link === activeLink?.replace('/', '')
-            ? { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }
+            ? { textShadow: '0px 3px 2px rgba(0, 0, 0, 0.4)' }
             : {}
         }
         transition={{

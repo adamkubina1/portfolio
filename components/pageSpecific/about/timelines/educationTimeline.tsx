@@ -8,11 +8,11 @@ import { IoSchoolOutline } from 'react-icons/io5';
 import { TimelineBadge } from './timelineBadge';
 import { TimelineItemAnim } from './timelineItemAnim';
 
-export const EducationTimeline = () => {
+export const EducationTimeline = ({ tabClicked }: { tabClicked: boolean }) => {
   return (
     <ol className='relative border-l border-gray-200 dark:border-gray-700'>
       <TimelineItemAnim
-        delay={animationPhases.about.phaseOne}
+        delay={tabClicked ? 0 : animationPhases.about.phaseOne}
         duration={animationTimeline.about.timelineItemsDuration}
       >
         <TimelineItem
@@ -29,8 +29,10 @@ export const EducationTimeline = () => {
       </TimelineItemAnim>
       <TimelineItemAnim
         delay={
-          animationPhases.about.phaseOne +
-          animationTimeline.about.timelineItemsDelay
+          tabClicked
+            ? animationTimeline.about.timelineItemsDelay
+            : animationPhases.about.phaseOne +
+              animationTimeline.about.timelineItemsDelay
         }
         duration={animationTimeline.about.timelineItemsDuration}
       >

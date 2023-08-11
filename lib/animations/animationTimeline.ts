@@ -24,11 +24,11 @@ export const animationTimeline = {
   pageTransDurationX: 0.25,
   pageTransDurationOpacity: 0.25,
   about: {
-    highlightDelay: 0.15,
+    highlightDelay: 0.25,
     highlightsCount: 3, //This needs to be updated manualy sucks
-    highlightDuration: 0.4,
+    highlightDuration: 0.3,
     timelineItemsDelay: 0.1,
-    timelineItemsDuration: 1,
+    timelineItemsDuration: 0.2,
     timelineItemsCount: 2, //Manualy
   },
 };
