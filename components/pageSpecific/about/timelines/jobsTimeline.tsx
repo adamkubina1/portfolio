@@ -6,7 +6,10 @@ import { TimelineItemAnim } from './timelineItemAnim';
 export const JobsTimeline = () => {
   return (
     <ol className='relative border-l border-gray-200 dark:border-gray-700 max-md:mt-4'>
-      <TimelineItemAnim delay={animationTimeline.pageTransDurationX}>
+      <TimelineItemAnim
+        delay={0}
+        duration={animationTimeline.about.timelineItemsDuration}
+      >
         <TimelineItem
           masters={'Fullstack developer'}
           time={'2022'}
@@ -15,10 +18,8 @@ export const JobsTimeline = () => {
         />
       </TimelineItemAnim>
       <TimelineItemAnim
-        delay={
-          animationTimeline.pageTransDurationX +
-          animationTimeline.about.timelineItemsDelay
-        }
+        delay={animationTimeline.about.timelineItemsDelay}
+        duration={animationTimeline.about.timelineItemsDuration}
       >
         <TimelineItem
           masters={'Software developer'}
@@ -28,10 +29,8 @@ export const JobsTimeline = () => {
         />
       </TimelineItemAnim>
       <TimelineItemAnim
-        delay={
-          animationTimeline.pageTransDurationX +
-          animationTimeline.about.timelineItemsDelay * 2
-        }
+        delay={animationTimeline.about.timelineItemsDelay * 2}
+        duration={animationTimeline.about.timelineItemsDuration}
       >
         <TimelineItem
           masters={'CMS administrator'}
@@ -56,7 +55,7 @@ const TimelineItem = ({
   badges?: string[];
 }) => {
   return (
-    <li className='mb-8 ml-6'>
+    <li className='mb-8 md:mb-12 ml-6'>
       <span
         className='absolute flex items-center justify-center w-6 h-6
         rounded-full -left-3 ring-8 ring-light-base dark:ring-dark-base'

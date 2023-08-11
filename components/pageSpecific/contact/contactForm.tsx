@@ -8,7 +8,6 @@ export const ContactForm = () => {
     <form className='flex max-w-md flex-col gap-2'>
       <Undertext>Or shoot me email directly!</Undertext>
       <EmailField />
-      <SubjectField />
       <EmailBodyField />
       <Button type='submit'>Submit</Button>
     </form>
@@ -27,23 +26,6 @@ const EmailField = () => {
         required
         shadow
         type='email'
-      />
-    </div>
-  );
-};
-
-const SubjectField = () => {
-  return (
-    <div>
-      <div className='mb-2 block'>
-        <Label htmlFor='subject' value='Email subject' />
-      </div>
-      <TextInput
-        id='subject'
-        placeholder='Subject'
-        required
-        shadow
-        type='text'
       />
     </div>
   );

@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 export const TimelineItemAnim = ({
   children,
   delay,
+  duration,
 }: {
   children: React.ReactNode;
   delay: number;
+  duration: number;
 }) => {
   return (
     <motion.div
@@ -15,6 +17,7 @@ export const TimelineItemAnim = ({
         opacity: 1,
         transition: {
           delay: delay,
+          duration: duration,
         },
       }}
     >
