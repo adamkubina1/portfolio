@@ -1,12 +1,44 @@
+import { animationTimeline } from '@/lib/animations/animationTimeline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoSchoolOutline } from 'react-icons/io5';
+import { TimelineBadge } from './timelineBadge';
+import { TimelineItemAnim } from './timelineItemAnim';
 
 export const EducationTimeline = () => {
   return (
     <ol className='relative border-l border-gray-200 dark:border-gray-700'>
-      <MastersItem />
-      <BachelorsItem />
+      <TimelineItemAnim delay={animationTimeline.pageTransDurationX}>
+        <TimelineItem
+          masters={'Development of information systems'}
+          time={'2023'}
+          degree={'Masters degree'}
+          badges={[
+            'Systems Development',
+            'Architecture Design',
+            'SW Implementation',
+            'Project Management',
+          ]}
+        />
+      </TimelineItemAnim>
+      <TimelineItemAnim
+        delay={
+          animationTimeline.pageTransDurationX +
+          animationTimeline.about.timelineItemsDelay
+        }
+      >
+        <TimelineItem
+          masters={'Applied informatics'}
+          time={'2020 - 2023'}
+          degree={"Bachelor's degree"}
+          badges={[
+            'Software Development',
+            'IT Integration',
+            'Process Analysis',
+            'Knowledge Processing',
+          ]}
+        />
+      </TimelineItemAnim>
     </ol>
   );
 };
@@ -20,7 +52,7 @@ const TimelineItem = ({
   masters: string;
   time: string;
   degree: string;
-  badges?: React.ReactNode;
+  badges?: string[];
 }) => {
   return (
     <li className='mb-8 ml-6'>
@@ -56,61 +88,13 @@ const TimelineItem = ({
           height={30}
         />
       </Link>
-      <div className='mt-2 mr-6 md:mr-12'>{badges}</div>
+      <div className='mt-2 mr-6 md:mr-12'>
+        <div className='grid grid-cols-2 gap-1.5'>
+          {badges?.map((badge, i) => (
+            <TimelineBadge key={i}>{badge}</TimelineBadge>
+          ))}
+        </div>
+      </div>
     </li>
-  );
-};
-
-const TimelineBadge = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <span
-      className='flex justify-start items-center bg-light-highlight2 dark:bg-dark-highlight1 text-[12px]  px-0.5
-  py-0.5 rounded  dark:text-gray-300'
-    >
-      {children}
-    </span>
-  );
-};
-
-const BachelorsItem = () => {
-  return (
-    <TimelineItem
-      masters={'Applied informatics'}
-      time={'2020 - 2023'}
-      degree={"Bachelor's degree"}
-      badges={<BachelorsBadges />}
-    />
-  );
-};
-const BachelorsBadges = () => {
-  return (
-    <div className='grid grid-cols-2 gap-1.5'>
-      <TimelineBadge>Software Development</TimelineBadge>
-      <TimelineBadge>IT Integration</TimelineBadge>
-      <TimelineBadge>Process Analysis</TimelineBadge>
-      <TimelineBadge>Knowledge Processing</TimelineBadge>
-    </div>
-  );
-};
-
-const MastersItem = () => {
-  return (
-    <TimelineItem
-      masters={'Development of information systems'}
-      time={'2023'}
-      degree={'Masters degree'}
-      badges={<MastersBadges />}
-    />
-  );
-};
-
-const MastersBadges = () => {
-  return (
-    <div className='grid grid-cols-2 gap-1.5'>
-      <TimelineBadge>Systems Development</TimelineBadge>
-      <TimelineBadge>Architecture Design</TimelineBadge>
-      <TimelineBadge>SW Implementation</TimelineBadge>
-      <TimelineBadge>Project Management</TimelineBadge>
-    </div>
   );
 };

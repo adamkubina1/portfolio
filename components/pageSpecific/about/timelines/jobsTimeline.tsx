@@ -1,11 +1,45 @@
+import { animationTimeline } from '@/lib/animations/animationTimeline';
 import { FaLaptopCode } from 'react-icons/fa';
+import { TimelineBadge } from './timelineBadge';
+import { TimelineItemAnim } from './timelineItemAnim';
 
 export const JobsTimeline = () => {
   return (
     <ol className='relative border-l border-gray-200 dark:border-gray-700 max-md:mt-4'>
-      <FreelanceItem />
-      <NeoopsItem />
-      <AlaxItem />
+      <TimelineItemAnim delay={animationTimeline.pageTransDurationX}>
+        <TimelineItem
+          masters={'Fullstack developer'}
+          time={'2022'}
+          degree={'Freelance'}
+          badges={['Frontend', 'Backend', 'UI/UX']}
+        />
+      </TimelineItemAnim>
+      <TimelineItemAnim
+        delay={
+          animationTimeline.pageTransDurationX +
+          animationTimeline.about.timelineItemsDelay
+        }
+      >
+        <TimelineItem
+          masters={'Software developer'}
+          time={'2021 - 2022'}
+          degree={'Neoops s.r.o.'}
+          badges={['Prolog', 'NLP Scripts', 'GIT Flow']}
+        />
+      </TimelineItemAnim>
+      <TimelineItemAnim
+        delay={
+          animationTimeline.pageTransDurationX +
+          animationTimeline.about.timelineItemsDelay * 2
+        }
+      >
+        <TimelineItem
+          masters={'CMS administrator'}
+          time={'2019 - 2021'}
+          degree={'Alax spol. s.r.o.'}
+          badges={['CMS', 'Database', 'Copy Writing']}
+        />
+      </TimelineItemAnim>
     </ol>
   );
 };
@@ -19,7 +53,7 @@ const TimelineItem = ({
   masters: string;
   time: string;
   degree: string;
-  badges?: React.ReactNode;
+  badges?: string[];
 }) => {
   return (
     <li className='mb-8 ml-6'>
@@ -39,79 +73,13 @@ const TimelineItem = ({
       <p className='mb-1 text-base font-normal text-gray-500 dark:text-gray-400'>
         {degree}
       </p>
-      <div className='mt-2'>{badges}</div>
+      <div className='mt-2'>
+        <div className='grid grid-cols-3 gap-1.5'>
+          {badges?.map((badge, i) => (
+            <TimelineBadge key={i}>{badge}</TimelineBadge>
+          ))}
+        </div>
+      </div>
     </li>
-  );
-};
-
-const TimelineBadge = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <span
-      className='flex justify-start items-center bg-light-highlight2 dark:bg-dark-highlight1 text-[12px]  px-0.5
-  py-0.5 rounded  dark:text-gray-300'
-    >
-      {children}
-    </span>
-  );
-};
-
-const NeoopsItem = () => {
-  return (
-    <TimelineItem
-      masters={'Software developer'}
-      time={'2021 - 2022'}
-      degree={'Neoops s.r.o.'}
-      badges={<NeoopsBadges />}
-    />
-  );
-};
-const NeoopsBadges = () => {
-  return (
-    <div className='grid grid-cols-3 gap-1.5'>
-      <TimelineBadge>Prolog</TimelineBadge>
-      <TimelineBadge>NLP Scripts</TimelineBadge>
-      <TimelineBadge>GIT Flow</TimelineBadge>
-    </div>
-  );
-};
-
-const FreelanceItem = () => {
-  return (
-    <TimelineItem
-      masters={'Fullstack developer'}
-      time={'2022'}
-      degree={'Freelance'}
-      badges={<FreelanceBadges />}
-    />
-  );
-};
-
-const FreelanceBadges = () => {
-  return (
-    <div className='grid grid-cols-3 gap-1.5'>
-      <TimelineBadge>Frontend</TimelineBadge>
-      <TimelineBadge>Backend</TimelineBadge>
-      <TimelineBadge>UI/UX Design</TimelineBadge>
-    </div>
-  );
-};
-
-const AlaxItem = () => {
-  return (
-    <TimelineItem
-      masters={'CMS administrator'}
-      time={'2019 - 2021'}
-      degree={'Alax spol. s.r.o.'}
-      badges={<AlaxBadges />}
-    />
-  );
-};
-
-const AlaxBadges = () => {
-  return (
-    <div className='grid grid-cols-2 gap-1.5'>
-      <TimelineBadge>CMS/Database Admin</TimelineBadge>
-      <TimelineBadge>Copy Writing</TimelineBadge>
-    </div>
   );
 };
