@@ -9,13 +9,13 @@ export const AboutInfo = () => {
   return (
     <div className='max-w-xl flex'>
       <Text className='mb-6 md:mb-16 hyphens-auto text-justify'>
-        I am masters{' '}
+        I am{' '}
         <TextHighlight
           animate
           delay={animationPhases.phaseZero}
           duration={animationTimeline.about.highlightDuration}
         >
-          student
+          masters student
         </TextHighlight>{' '}
         based in Prague 🇨🇿. My main area of focus is software/systems{' '}
         <TextHighlight

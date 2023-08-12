@@ -1,4 +1,4 @@
-const calcAboutPhaseOne = () => {
+const calcAboutPhaseOneAbout = () => {
   return (
     animationTimeline.pageTransDurationX +
     animationTimeline.about.highlightDuration +
@@ -6,9 +6,9 @@ const calcAboutPhaseOne = () => {
       animationTimeline.about.highlightsCount
   );
 };
-const calcAboutPhaseTwo = () => {
+const calcAboutPhaseTwoAbout = () => {
   return (
-    calcAboutPhaseOne() +
+    calcAboutPhaseOneAbout() +
     animationTimeline.about.timelineItemsDuration +
     animationTimeline.about.timelineItemsDelay *
       animationTimeline.about.timelineItemsCount
@@ -31,12 +31,17 @@ export const animationTimeline = {
     timelineItemsDuration: 0.2,
     timelineItemsCount: 2, //Manualy
   },
+  projects: {
+    projectCardDelay: 0.1,
+    projectCardDuration: 0.2,
+    projectCardCount: 2, //Manualy
+  },
 };
 
 export const animationPhases = {
   phaseZero: animationTimeline.pageTransDurationX,
   about: {
-    phaseOne: calcAboutPhaseOne(),
-    phaseTwo: calcAboutPhaseTwo(),
+    phaseOne: calcAboutPhaseOneAbout(),
+    phaseTwo: calcAboutPhaseTwoAbout(),
   },
 };

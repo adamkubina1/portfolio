@@ -16,7 +16,7 @@ export default function Contact() {
         </div>
         <Socials />
       </div>
-      <div className='md:mt-24'>
+      <div className='mt-20 md:mt-24 w-full'>
         <ContactForm />
       </div>
     </PageWrapper>

@@ -24,7 +24,7 @@ export const Heading = ({
       );
     case 3:
       return (
-        <h4 className={`text-xl font-semibold ${className}`}>{children}</h4>
+        <h4 className={`text-lg font-semibold ${className}`}>{children}</h4>
       );
   }
 };

@@ -15,7 +15,7 @@ export const Timelines = () => {
       aria-label='Education and work tabs'
       theme={customTabTheme}
       style='default'
-      className='items-center gap-x-4 gap-y-0 mb-6'
+      className='items-center gap-x-4 gap-y-0 mb-6 pb-2'
       onActiveTabChange={() => setTabClicked(true)}
     >
       <Tabs.Item
@@ -25,7 +25,7 @@ export const Timelines = () => {
         <EducationTimeline tabClicked={tabClicked} />
       </Tabs.Item>
       <Tabs.Item
-        title='Work history'
+        title='Work History'
         icon={() => <FaLaptopCode className='mr-1' />}
       >
         <JobsTimeline />

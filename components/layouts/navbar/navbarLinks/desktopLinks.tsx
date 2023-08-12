@@ -9,7 +9,11 @@ export const DesktopLinks = ({
   activeLink: string | undefined;
 }) => {
   return (
-    <ul className={'hidden md:flex items-center border-b '}>
+    <ul
+      className={
+        'hidden md:flex items-center border-b dark:border-gray-600 border-gray-300'
+      }
+    >
       {navigationLinks.map((link, i) => (
         <DesktopLink key={i} activeLink={activeLink} link={link} />
       ))}

@@ -33,16 +33,23 @@ const Tools = () => {
         href={'https://www.typescriptlang.org/'}
         aria-label='Typescript'
         target='_blank'
+        className='hover:scale-105'
       >
         <SiTypescript className='shadow-sm shadow-black  rounded-full w-10 h-10 text-light-base  dark:text-[#3178c6] bg-[#3178c6] dark:bg-dark-base' />
       </Link>
-      <Link href={'https://nextjs.org/'} aria-label='Next.js' target='_blank'>
+      <Link
+        href={'https://nextjs.org/'}
+        aria-label='Next.js'
+        target='_blank'
+        className='hover:scale-105'
+      >
         <SiNextdotjs className='shadow-sm shadow-black  dark:text-white bg-black dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
       <Link
         href={'https://tailwindcss.com/'}
         aria-label='Tailwind'
         target='_blank'
+        className='hover:scale-105'
       >
         <SiTailwindcss className='shadow-sm shadow-black  dark:text-[#00b4b6] bg-[#00b4b6] dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
@@ -50,6 +57,7 @@ const Tools = () => {
         href={'https://firebase.google.com/'}
         aria-label='Firebase'
         target='_blank'
+        className='hover:scale-105'
       >
         <SiFirebase className='shadow-sm shadow-black  dark:text-[#FFCA28] bg-[#FFCA28] dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>
@@ -57,6 +65,7 @@ const Tools = () => {
         href={'https://www.cypress.io/'}
         aria-label='Cypress'
         target='_blank'
+        className='hover:scale-105'
       >
         <SiCypress className='shadow-sm shadow-black  dark:text-[#4B7B5B] bg-[#4B7B5B] dark:bg-dark-base w-10 h-10 rounded-full text-light-base' />
       </Link>

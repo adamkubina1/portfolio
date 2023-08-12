@@ -11,10 +11,13 @@ export const JobsTimeline = () => {
         duration={animationTimeline.about.timelineItemsDuration}
       >
         <TimelineItem
-          masters={'Fullstack developer'}
-          time={'2022'}
+          masters={'Fullstack Developer'}
+          time={'2022 - present'}
           degree={'Freelance'}
           badges={['Frontend', 'Backend', 'UI/UX']}
+          logo={
+            <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+          }
         />
       </TimelineItemAnim>
       <TimelineItemAnim
@@ -22,10 +25,13 @@ export const JobsTimeline = () => {
         duration={animationTimeline.about.timelineItemsDuration}
       >
         <TimelineItem
-          masters={'Software developer'}
+          masters={'Software Developer'}
           time={'2021 - 2022'}
           degree={'Neoops s.r.o.'}
           badges={['Prolog', 'NLP Scripts', 'GIT Flow']}
+          logo={
+            <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+          }
         />
       </TimelineItemAnim>
       <TimelineItemAnim
@@ -33,10 +39,13 @@ export const JobsTimeline = () => {
         duration={animationTimeline.about.timelineItemsDuration}
       >
         <TimelineItem
-          masters={'CMS administrator'}
+          masters={'CMS Administrator'}
           time={'2019 - 2021'}
           degree={'Alax spol. s.r.o.'}
           badges={['CMS', 'Database', 'Copy Writing']}
+          logo={
+            <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+          }
         />
       </TimelineItemAnim>
     </ol>
@@ -48,11 +57,13 @@ const TimelineItem = ({
   time,
   degree,
   badges,
+  logo,
 }: {
   masters: string;
   time: string;
   degree: string;
   badges?: string[];
+  logo: React.ReactNode;
 }) => {
   return (
     <li className='mb-8 md:mb-12 ml-6'>
@@ -60,7 +71,7 @@ const TimelineItem = ({
         className='absolute flex items-center justify-center w-6 h-6
         rounded-full -left-3 ring-8 ring-light-base dark:ring-dark-base'
       >
-        <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+        {logo}
       </span>
       <h3 className='flex items-center mb-1 text-lg font-semibold '>
         {masters}
@@ -73,7 +84,7 @@ const TimelineItem = ({
         {degree}
       </p>
       <div className='mt-2'>
-        <div className='grid grid-cols-3 gap-1.5'>
+        <div className='flex flex-row gap-1.5'>
           {badges?.map((badge, i) => (
             <TimelineBadge key={i}>{badge}</TimelineBadge>
           ))}

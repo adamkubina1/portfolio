@@ -30,7 +30,7 @@ const ToolsInfoMobile = () => {
       aria-label='Technologies and Github statistics tabs'
       style='default'
       theme={customTabTheme}
-      className='items-center gap-x-4 gap-y-0 mb-2 mt-4 md:hidden'
+      className='items-center gap-x-4 gap-y-0 mb-2 mt-4 md:hidden pb-2'
     >
       <Tabs.Item
         title='Tech stack'

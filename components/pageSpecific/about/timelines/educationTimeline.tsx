@@ -5,6 +5,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoSchoolOutline } from 'react-icons/io5';
+import { LiaSchoolSolid } from 'react-icons/lia';
 import { TimelineBadge } from './timelineBadge';
 import { TimelineItemAnim } from './timelineItemAnim';
 
@@ -17,7 +18,7 @@ export const EducationTimeline = ({ tabClicked }: { tabClicked: boolean }) => {
       >
         <TimelineItem
           masters={'Development of Information Systems'}
-          time={'2023'}
+          time={'2023 - present'}
           degree={'Masters degree'}
           badges={[
             'Systems Development',
@@ -25,6 +26,9 @@ export const EducationTimeline = ({ tabClicked }: { tabClicked: boolean }) => {
             'SW Implementation',
             'Project Management',
           ]}
+          logo={
+            <LiaSchoolSolid className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+          }
         />
       </TimelineItemAnim>
       <TimelineItemAnim
@@ -46,6 +50,9 @@ export const EducationTimeline = ({ tabClicked }: { tabClicked: boolean }) => {
             'Process Analysis',
             'Knowledge Processing',
           ]}
+          logo={
+            <IoSchoolOutline className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+          }
         />
       </TimelineItemAnim>
     </ol>
@@ -57,11 +64,13 @@ const TimelineItem = ({
   time,
   degree,
   badges,
+  logo,
 }: {
   masters: string;
   time: string;
   degree: string;
   badges?: string[];
+  logo: React.ReactNode;
 }) => {
   return (
     <li className='mb-12 md:mb-16 ml-6'>
@@ -69,7 +78,7 @@ const TimelineItem = ({
         className='absolute flex items-center justify-center w-6 h-6
         rounded-full -left-3 ring-8 ring-light-base dark:ring-dark-base'
       >
-        <IoSchoolOutline className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+        {logo}
       </span>
       <h3 className='flex items-center mb-1 text-lg font-semibold '>
         {masters}
@@ -83,25 +92,23 @@ const TimelineItem = ({
       <Link href={'https://fis.vse.cz/'} target='_blank'>
         <Image
           src={'/imgs/vseLogo.svg'}
-          className='dark:hidden'
+          className='dark:hidden hover:scale-105'
           alt='Vse logo'
           width={122.84}
           height={30}
         />
         <Image
           src={'/imgs/vseLogoDark.svg'}
-          className='hidden dark:block'
+          className='hidden dark:block hover:scale-105'
           alt='Vse logo'
           width={122.84}
           height={30}
         />
       </Link>
-      <div className='mt-4 mr-6 md:mr-12'>
-        <div className='grid grid-cols-2 gap-1.5'>
-          {badges?.map((badge, i) => (
-            <TimelineBadge key={i}>{badge}</TimelineBadge>
-          ))}
-        </div>
+      <div className='mt-4 flex flex-row flex-wrap gap-1.5 w-72'>
+        {badges?.map((badge, i) => (
+          <TimelineBadge key={i}>{badge}</TimelineBadge>
+        ))}
       </div>
     </li>
   );
