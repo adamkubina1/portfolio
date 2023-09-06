@@ -20,23 +20,12 @@ export const projects: ProjectCardType[] = [
     tags: ['Next.js', 'Algolia', 'Firebase', 'Chakra'],
   },
   {
-    projectName: 'SWAPni-TO',
-    imgAlt: 'SWAP-ni-TO web app',
-    imgSrc: '/imgs/projects/swapniTo.webp',
-    codeLink: 'https://github.com/adamkubina1/SWAPni-TO',
-    webLink: 'https://swapni-to.vercel.app/',
+    projectName: 'Etologie člověka',
+    imgAlt: 'Etologie člověka web',
+    imgSrc: '/imgs/projects/underConstruction.webp',
+    webLink: '/',
 
-    projectDesc: 'Web application streamling the process of book swapping.',
-    tags: ['Next.js', 'Algolia', 'Firebase', 'Chakra'],
-  },
-  {
-    projectName: 'SWAPni-TO',
-    imgAlt: 'SWAP-ni-TO web app',
-    imgSrc: '/imgs/projects/swapniTo.webp',
-    codeLink: 'https://github.com/adamkubina1/SWAPni-TO',
-    webLink: 'https://swapni-to.vercel.app/',
-
-    projectDesc: 'Web application streamling the process of book swapping.',
-    tags: ['Next.js', 'Algolia', 'Firebase', 'Chakra'],
+    projectDesc: 'Project I am currently working on.',
+    tags: [],
   },
 ];

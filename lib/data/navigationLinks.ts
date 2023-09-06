@@ -1,6 +1,6 @@
 export const navigationLinks: string[] = [
   'about',
   'projects',
-  'blog',
+  // 'blog',
   'contact',
 ];

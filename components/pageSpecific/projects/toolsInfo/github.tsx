@@ -13,7 +13,7 @@ export const Github = () => {
       <div className='flex justify-start'>
         <img
           alt='stats'
-          src='https://github-readme-streak-stats.herokuapp.com/?user=adamkubina1&theme=transparent&hide_border=true'
+          src='https://github-readme-streak-stats-liart.vercel.app/?user=adamkubina1&theme=transparent&hide_border=true'
           className='h-full  '
         />
       </div>

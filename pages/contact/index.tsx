@@ -9,15 +9,15 @@ export default function Contact() {
   return (
     <PageWrapper direction={'left'} leftHref={'/blog'}>
       <PageHeading heading='Contact' />
-      <div className='flex flex-col md:flex-row w-full items-center md:items-start md:justify-center md:gap-4'>
-        <div>
+      <div className='flex flex-col items-center gap-6 md:gap-12 justify-start w-full'>
+        <div className='flex flex-col md:flex-row w-full md:items-start items-center justify-center md:gap-12 '>
           <Status />
-          <DownloadCv />
+          <Socials />
         </div>
-        <Socials />
-      </div>
-      <div className='mt-20 md:mt-24 w-full'>
-        <ContactForm />
+        <DownloadCv />
+        <div className=' w-full'>
+          <ContactForm />
+        </div>
       </div>
     </PageWrapper>
   );
