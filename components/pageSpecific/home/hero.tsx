@@ -1,3 +1,4 @@
+import { colorFading } from '@/lib/animations/colorFading';
 import { motion } from 'framer-motion';
 import { Ceviche_One } from 'next/font/google';
 
@@ -12,14 +13,32 @@ export const Hero = () => {
       <div className={'flex gap-2'}>
         <p className={'text-7xl font-bold'}>Hey! </p>
         <div className={'pt-4 text-2xl'}>
-          <p className={'text-red-700 dark:text-blue-700 '}>My</p>
+          <p className={' '}>My</p>
           <p>name is</p>
         </div>
       </div>
-      <h1 className={`text-9xl ${cevicheOne.className}`}>Adam</h1>
+      <motion.h1
+        className={`text-9xl ${cevicheOne.className}`}
+        style={{
+          backgroundImage: colorFading.backgroundImage,
+          WebkitTextFillColor: 'transparent',
+          WebkitBackgroundClip: 'text',
+          backgroundSize: '400% 400%',
+        }}
+        animate={{ backgroundPosition: colorFading.backgroundPosition }}
+        transition={{
+          backgroundPosition: {
+            ease: 'easeInOut',
+            duration: 20,
+            repeat: Infinity,
+          },
+        }}
+      >
+        Adam
+      </motion.h1>
 
       <p className={'text-2xl'}>and I am</p>
-      <WhoAmI words={WORD_LIST} />
+      <p className='text-4xl'>developer</p>
     </>
   );
 };

@@ -12,7 +12,7 @@ export const ProjectsList = () => {
 
   return (
     <>
-      <Heading level={2}>Projects</Heading>
+      <Heading level={2}>Latest</Heading>
       <Undertext className='text-center'>
         Latest projects I have worked on
       </Undertext>

@@ -9,7 +9,7 @@ export const PulsatingCircle = ({
 }) => {
   return (
     <motion.div
-      className={`w-2 h-2 rounded-full mx-auto ${className}`}
+      className={`w-1 h-1 rounded-full mx-auto ${className}`}
       initial={{ opacity: 0, scale: 0 }}
       animate={{
         boxShadow: [

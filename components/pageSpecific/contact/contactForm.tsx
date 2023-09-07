@@ -7,17 +7,16 @@ import { FiMail } from 'react-icons/fi';
 export const ContactForm = () => {
   return (
     <form
-      className='flex flex-col gap-2 items-center'
-      onSubmit={(e) => {
-        e.preventDefault();
-      }}
+      action={'https://submit-form.com/KeSjDB0y'}
+      className='flex flex-col gap-2 items-center w-full'
+      onSubmit={(e) => {}}
     >
       <Undertext className='text-center'>Or contact me directly!</Undertext>
       <EmailField />
       <EmailBodyField />
       <button
         className={
-          'border-[0.5px] px-8 py-2 mt-2 rounded-xl flex flex-row items-center gap-2'
+          'border-[0.5px] px-8 py-2 mt-2 rounded-xl flex flex-row items-center gap-2 shadow-sm hover:scale-105 hover:shadow-md'
         }
         type='submit'
       >
@@ -30,12 +29,13 @@ export const ContactForm = () => {
 
 const EmailField = () => {
   return (
-    <div className='w-3/4 md:w-1/2'>
+    <div className='w-11/12 md:w-3/5'>
       <div className='mb-2 block'>
         <Label htmlFor='email' value='Your email' />
       </div>
       <TextInput
         id='email'
+        name='email'
         placeholder='name@email.com'
         required
         shadow
@@ -47,11 +47,17 @@ const EmailField = () => {
 
 const EmailBodyField = () => {
   return (
-    <div className='w-3/4 md:w-1/2' id='textarea'>
+    <div className='w-11/12 md:w-3/5' id='textarea'>
       <div className='mb-2 block'>
         <Label htmlFor='comment' value='Your message for me' />
       </div>
-      <Textarea id='comment' placeholder='Lorem ipsum' required rows={4} />
+      <Textarea
+        id='comment'
+        name='message'
+        placeholder='Lorem ipsum'
+        required
+        rows={6}
+      />
     </div>
   );
 };

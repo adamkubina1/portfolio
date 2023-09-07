@@ -1,8 +1,8 @@
 import { navigationLinks } from '@/lib/data/navigationLinks';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
-import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 import { NavbarOpenType } from '../navbar';
+import { NavbarToggle } from '../navbarToggle';
 import { LinkHighlighterDark, LinkHighlighterLight } from './linkHighlighter';
 
 export const MobileLinks = ({
@@ -11,12 +11,17 @@ export const MobileLinks = ({
   activeLink,
 }: NavbarOpenType & { activeLink: string | undefined }) => {
   return (
-    <>
+    <motion.div
+      animate={isOpen ? 'open' : 'closed'}
+      className='flex items-center mt-2'
+    >
       <div
         className={'md:hidden flex items-center hover:cursor-pointer'}
         onClick={() => setOpen(!isOpen)}
       >
-        <div className='z-50'>{isOpen ? <CloseIcon /> : <HamburgerIcon />}</div>
+        <div className='z-50'>
+          <NavbarToggle />
+        </div>
       </div>
       <AnimatePresence>
         {isOpen ? (
@@ -27,7 +32,7 @@ export const MobileLinks = ({
           />
         ) : null}
       </AnimatePresence>
-    </>
+    </motion.div>
   );
 };
 
@@ -43,7 +48,7 @@ const MobileLinksMenu = ({
       }
       key={'mobilelinks'}
       initial={{ opacity: 0, width: 0, height: 0 }}
-      animate={{ opacity: 1, width: '100vw', height: '100vh' }}
+      animate={{ opacity: 1, width: '100%', height: '100vh' }}
       exit={{ opacity: 0, width: 0, height: 0 }}
       transition={{ opacity: { duration: 0.5 } }}
     >
@@ -100,12 +105,4 @@ const MobileLink = ({
       </motion.div>
     </li>
   );
-};
-
-const HamburgerIcon = () => {
-  return <RxHamburgerMenu size={20} />;
-};
-
-const CloseIcon = () => {
-  return <RxCross1 size={20} />;
 };

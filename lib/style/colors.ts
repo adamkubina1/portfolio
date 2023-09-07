@@ -10,6 +10,8 @@ export const colors = {
   'dark-highlight2': '#FFFF00',
   'dark-highlight3': '#00FFFF',
   'transparent-tmp': 'rgba(220,220,220,0.95)',
+  'grey-shadow': 'rgba(0, 0, 0, 0.6)',
+  'purple-shadow': 'rgba(255, 0, 255, 0.4)',
 };
 
 module.exports = colors;

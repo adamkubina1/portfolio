@@ -1,4 +1,4 @@
-const calcAboutPhaseOneAbout = () => {
+const calcAboutPhaseOne = () => {
   return (
     animationTimeline.pageTransDurationX +
     animationTimeline.about.highlightDuration +
@@ -6,12 +6,21 @@ const calcAboutPhaseOneAbout = () => {
       animationTimeline.about.highlightsCount
   );
 };
-const calcAboutPhaseTwoAbout = () => {
+const calcAboutPhaseTwo = () => {
   return (
-    calcAboutPhaseOneAbout() +
+    calcAboutPhaseOne() +
     animationTimeline.about.timelineItemsDuration +
     animationTimeline.about.timelineItemsDelay *
       animationTimeline.about.timelineItemsCount
+  );
+};
+
+const calcContactPhaseOne = () => {
+  return (
+    animationTimeline.pageTransDurationX +
+    animationTimeline.contact.highlightDuration +
+    animationTimeline.contact.highlightDelay *
+      animationTimeline.contact.highlightsCount
   );
 };
 
@@ -36,12 +45,23 @@ export const animationTimeline = {
     projectCardDuration: 0.2,
     projectCardCount: 2, //Manualy
   },
+  contact: {
+    highlightDelay: 0.25,
+    highlightsCount: 3, //This needs to be updated manualy sucks
+    highlightDuration: 0.3,
+    socialLinkDelay: 0.1,
+    socialLinkDuration: 0.2,
+    socialLinkCount: 3, //Manualy
+  },
 };
 
 export const animationPhases = {
   phaseZero: animationTimeline.pageTransDurationX,
   about: {
-    phaseOne: calcAboutPhaseOneAbout(),
-    phaseTwo: calcAboutPhaseTwoAbout(),
+    phaseOne: calcAboutPhaseOne(),
+    phaseTwo: calcAboutPhaseTwo(),
+  },
+  contact: {
+    phaseOne: calcContactPhaseOne(),
   },
 };

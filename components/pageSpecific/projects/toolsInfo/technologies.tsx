@@ -11,7 +11,7 @@ import {
 
 export const Technologies = () => {
   return (
-    <div className='md:self-start md:mt-4 flex flex-col gap-1 items-center'>
+    <div className='md:self-start md:mt-4 flex flex-col gap-1 items-center md:w-1/2'>
       <Heading level={2} className='max-md:hidden'>
         Tech stack
       </Heading>
@@ -20,7 +20,8 @@ export const Technologies = () => {
       <img
         alt='stats'
         src='https://github-readme-stats.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true'
-        className='h-full'
+        className='h-[165px]'
+        loading='lazy'
       />
     </div>
   );
@@ -28,7 +29,7 @@ export const Technologies = () => {
 
 const Tools = () => {
   return (
-    <div className='flex gap-2  flex-wrap justify-center'>
+    <div className='flex gap-2 flex-wrap justify-center'>
       <Link
         href={'https://www.typescriptlang.org/'}
         aria-label='Typescript'
