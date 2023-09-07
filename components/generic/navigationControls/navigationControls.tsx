@@ -9,36 +9,24 @@ export const NavigationControls = ({
   leftHref?: string;
   rightHref?: string;
 }) => {
-  if (direction === 'left')
-    return (
-      <NavControlContainer>
-        <PagePusher
-          direction={direction}
-          pageHref={leftHref ? leftHref : '/'}
-        />
-      </NavControlContainer>
-    );
-
-  if (direction === 'right')
-    return (
-      <NavControlContainer>
-        <PagePusher
-          direction={direction}
-          pageHref={rightHref ? rightHref : '/'}
-        />
-      </NavControlContainer>
-    );
-
   return (
     <NavControlContainer>
-      <PagePusher direction={'left'} pageHref={leftHref ? leftHref : '/'} />
-      <PagePusher direction={'right'} pageHref={rightHref ? rightHref : '/'} />
+      <PagePusher
+        direction={'left'}
+        disabled={direction === 'right'}
+        pageHref={leftHref ? leftHref : '/'}
+      />
+      <PagePusher
+        direction={'right'}
+        disabled={direction === 'left'}
+        pageHref={rightHref ? rightHref : '/'}
+      />
     </NavControlContainer>
   );
 };
 
 const NavControlContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={'fixed bottom-6 md:bottom-10 right-1/4'}>{children}</div>
+    <div className={'mt-auto pb-6 md:pb-8 flex flex-row gap-5'}>{children}</div>
   );
 };
