@@ -27,7 +27,7 @@ export const EducationTimeline = ({ tabClicked }: { tabClicked: boolean }) => {
             'Project Management',
           ]}
           logo={
-            <LiaSchoolSolid className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+            <LiaSchoolSolid className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
           }
         />
       </TimelineItemAnim>
@@ -51,7 +51,7 @@ export const EducationTimeline = ({ tabClicked }: { tabClicked: boolean }) => {
             'Knowledge Processing',
           ]}
           logo={
-            <IoSchoolOutline className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+            <IoSchoolOutline className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
           }
         />
       </TimelineItemAnim>

@@ -10,7 +10,7 @@ export default function Contact() {
     <PageWrapper direction={'left'} leftHref={'/projects'}>
       <PageHeading heading='Contact' />
       <ContactText />
-      <div className='flex flex-col items-center gap-6 md:gap-4 justify-start w-full'>
+      <div className='flex flex-col items-center gap-4 justify-start w-full'>
         <div>
           <Socials />
           <DownloadCv />

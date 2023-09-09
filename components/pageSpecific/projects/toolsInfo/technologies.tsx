@@ -20,7 +20,7 @@ export const Technologies = () => {
       <img
         alt='stats'
         src='https://github-readme-stats.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true'
-        className='h-[165px]'
+        className='h-[165px] md:w-[300px]'
         loading='lazy'
       />
     </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { Heading } from '@/components/generic/typography/heading';
 import { Undertext } from '@/components/generic/typography/underText';
 import { Label, TextInput, Textarea } from 'flowbite-react';
 import { FiMail } from 'react-icons/fi';
@@ -11,7 +12,10 @@ export const ContactForm = () => {
       className='flex flex-col gap-2 items-center w-full'
       onSubmit={(e) => {}}
     >
-      <Undertext className='text-center'>Or contact me directly!</Undertext>
+      <div>
+        <Heading level={2}>Direct message</Heading>
+        <Undertext className='text-center'>Contact me directly!</Undertext>
+      </div>
       <EmailField />
       <EmailBodyField />
       <button

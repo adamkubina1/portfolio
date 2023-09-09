@@ -13,7 +13,7 @@ export const Socials = () => {
   return (
     <div className='flex flex-col justify-start items-center mb-2'>
       <Heading level={2}>My Socials</Heading>
-      <Undertext className='mb-4 text-center'>
+      <Undertext className='mb-2 text-center'>
         Get in touch with me here
       </Undertext>
       <SocialsList />

@@ -14,7 +14,7 @@ export const Github = () => {
         <img
           alt='stats'
           src='https://github-readme-streak-stats-liart.vercel.app/?user=adamkubina1&theme=transparent&hide_border=true'
-          className='h-[135.5px]'
+          className='h-[135.5px] md:w-[321.97px]'
           loading='lazy'
         />
       </div>

@@ -66,15 +66,15 @@ const DiamondAnimation = ({ active }: { active: boolean }) => {
           ? {
               borderRadius: colorFading.borderRadius,
               backgroundPosition: colorFading.backgroundPosition,
-              x: [0, 10, 0, 5, 0, 5, 0],
-              y: [0, 10, 0, 2, 0, 2, 0],
+              x: [0, 8, 0, 5, 0, 5, 0],
+              y: [0, 8, 0, 2, 0, 2, 0],
               boxShadow: '0px 30px 20px -7px',
             }
           : {
               borderRadius: colorFading.borderRadius,
               backgroundPosition: colorFading.backgroundPosition,
-              x: [0, 10, 0, 5, 0, 5, 0],
-              y: [0, 10, 0, 2, 0, 2, 0],
+              x: [0, 8, 0, 5, 0, 5, 0],
+              y: [0, 8, 0, 2, 0, 2, 0],
             }
       }
       transition={{

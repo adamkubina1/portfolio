@@ -16,7 +16,7 @@ export const JobsTimeline = () => {
           degree={'Freelance'}
           badges={['Frontend', 'Backend', 'UI/UX']}
           logo={
-            <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+            <FaLaptopCode className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
           }
         />
       </TimelineItemAnim>
@@ -30,7 +30,7 @@ export const JobsTimeline = () => {
           degree={'Neoops s.r.o.'}
           badges={['Prolog', 'NLP Scripts', 'GIT Flow']}
           logo={
-            <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+            <FaLaptopCode className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
           }
         />
       </TimelineItemAnim>
@@ -44,7 +44,7 @@ export const JobsTimeline = () => {
           degree={'Alax spol. s.r.o.'}
           badges={['CMS', 'Database', 'Copy Writing']}
           logo={
-            <FaLaptopCode className='w-6 h-6 bg-light-highlight2 dark:bg-dark-highlight1 rounded-full' />
+            <FaLaptopCode className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
           }
         />
       </TimelineItemAnim>

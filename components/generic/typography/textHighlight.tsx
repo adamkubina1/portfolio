@@ -22,8 +22,8 @@ export const TextHighlight = ({
             }
           : {}
       }
+      className='bg-gradient-to-t from-light-highlight1 to-light-highlight1  dark:from-dark-highlight1 dark:to-dark-highlight1'
       style={{
-        backgroundImage: 'linear-gradient(#7efff5,#7efff5)',
         backgroundSize: '100%',
         backgroundRepeat: 'no-repeat',
         display: 'inline-block',
