@@ -49,12 +49,11 @@ const DiamondAnimation = ({ active }: { active: boolean }) => {
     <motion.div
       style={{
         aspectRatio: '1',
-        background: 'black',
         borderRadius: '61% 39% 16% 84% / 57% 72% 28% 43%',
-        backgroundImage: colorFading.backgroundImage,
+        // backgroundImage: colorFading.backgroundImage,
         backgroundSize: '400% 400%',
       }}
-      className={`relative w-1/2 ${
+      className={`relative w-1/2 bg-gradient-to-tr from-red-600 to-blue-700 ${
         active ? 'text-grey-shadow dark:text-purple-shadow' : 'text-transparent'
       }`}
       whileHover={{

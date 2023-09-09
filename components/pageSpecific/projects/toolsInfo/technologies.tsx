@@ -1,5 +1,6 @@
 import { Heading } from '@/components/generic/typography/heading';
 import { Undertext } from '@/components/generic/typography/underText';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import {
   SiCypress,
@@ -10,19 +11,29 @@ import {
 } from 'react-icons/si';
 
 export const Technologies = () => {
+  const { theme } = useTheme();
+
   return (
     <div className='md:self-start md:mt-4 flex flex-col gap-1 items-center md:w-1/2'>
       <Heading level={2} className='max-md:hidden'>
-        Tech stack
+        Tech Stack
       </Heading>
-      <Undertext className='text-center'>My favorite tools</Undertext>
+      <Undertext className='text-center'>
+        My fav tools & language stats
+      </Undertext>
       <Tools />
-      <img
-        alt='stats'
-        src='https://github-readme-stats.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true'
-        className='h-[165px] md:w-[300px]'
-        loading='lazy'
-      />
+      <a href={'https://github.com/adamkubina1'} target='_blank'>
+        <img
+          alt='stats'
+          src={
+            theme === 'light'
+              ? `https://github-readme-stats-three-omega-17.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true&hide_title=true&text_color=332E2E`
+              : 'https://github-readme-stats-three-omega-17.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true&hide_title=true&text_color=F3F3F3'
+          }
+          className='h-[120px] '
+          loading='lazy'
+        />
+      </a>
     </div>
   );
 };

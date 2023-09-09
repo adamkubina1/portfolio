@@ -18,9 +18,9 @@ export const Hero = () => {
         </div>
       </div>
       <motion.h1
-        className={`text-9xl ${cevicheOne.className}`}
+        className={`text-9xl ${cevicheOne.className} bg-gradient-to-tr from-red-600 to-blue-700`}
         style={{
-          backgroundImage: colorFading.backgroundImage,
+          // backgroundImage: colorFading.backgroundImage,
           WebkitTextFillColor: 'transparent',
           WebkitBackgroundClip: 'text',
           backgroundSize: '400% 400%',

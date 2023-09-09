@@ -1,5 +1,5 @@
 export const colorFading = {
-  backgroundImage: 'linear-gradient(45deg, blue, red,  purple, blue)',
+  // backgroundImage: 'linear-gradient(45deg, blue, red,  purple, blue)',
   borderRadius: [
     '61% 39% 16% 84% / 57% 72% 28% 43%',
     '65% 35% 55% 45% / 55% 50% 55% 45%',

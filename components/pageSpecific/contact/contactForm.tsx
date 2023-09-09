@@ -2,6 +2,10 @@
 
 import { Heading } from '@/components/generic/typography/heading';
 import { Undertext } from '@/components/generic/typography/underText';
+import {
+  customTextAreaTheme,
+  customTextInputTheme,
+} from '@/lib/style/customFormTheme';
 import { Label, TextInput, Textarea } from 'flowbite-react';
 import { FiMail } from 'react-icons/fi';
 
@@ -13,14 +17,14 @@ export const ContactForm = () => {
       onSubmit={(e) => {}}
     >
       <div>
-        <Heading level={2}>Direct message</Heading>
+        <Heading level={2}>Direct Message</Heading>
         <Undertext className='text-center'>Contact me directly!</Undertext>
       </div>
       <EmailField />
       <EmailBodyField />
       <button
         className={
-          'border-[0.5px] px-8 py-2 mt-2 rounded-xl flex flex-row items-center gap-2 shadow-sm hover:scale-105 hover:shadow-md'
+          'dark:border-gray-700 border-[0.5px] px-8 py-2 mt-2 rounded-xl flex flex-row items-center gap-2 shadow-sm hover:scale-105 hover:shadow-md'
         }
         type='submit'
       >
@@ -38,6 +42,7 @@ const EmailField = () => {
         <Label htmlFor='email' value='Your email' />
       </div>
       <TextInput
+        theme={customTextInputTheme}
         id='email'
         name='email'
         placeholder='name@email.com'
@@ -56,6 +61,7 @@ const EmailBodyField = () => {
         <Label htmlFor='comment' value='Your message for me' />
       </div>
       <Textarea
+        theme={customTextAreaTheme}
         id='comment'
         name='message'
         placeholder='Lorem ipsum'

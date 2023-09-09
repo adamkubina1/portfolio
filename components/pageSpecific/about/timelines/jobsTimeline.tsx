@@ -15,9 +15,7 @@ export const JobsTimeline = () => {
           time={'2022 - present'}
           degree={'Freelance'}
           badges={['Frontend', 'Backend', 'UI/UX']}
-          logo={
-            <FaLaptopCode className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
-          }
+          logo={<FaLaptopCode className='w-6 h-6  rounded-full' />}
         />
       </TimelineItemAnim>
       <TimelineItemAnim
@@ -29,9 +27,7 @@ export const JobsTimeline = () => {
           time={'2021 - 2022'}
           degree={'Neoops s.r.o.'}
           badges={['Prolog', 'NLP Scripts', 'GIT Flow']}
-          logo={
-            <FaLaptopCode className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
-          }
+          logo={<FaLaptopCode className='w-6 h-6  rounded-full' />}
         />
       </TimelineItemAnim>
       <TimelineItemAnim
@@ -43,9 +39,7 @@ export const JobsTimeline = () => {
           time={'2019 - 2021'}
           degree={'Alax spol. s.r.o.'}
           badges={['CMS', 'Database', 'Copy Writing']}
-          logo={
-            <FaLaptopCode className='w-6 h-6 bg-light-highlight1 dark:bg-dark-highlight1 rounded-full' />
-          }
+          logo={<FaLaptopCode className='w-6 h-6  rounded-full' />}
         />
       </TimelineItemAnim>
     </ol>

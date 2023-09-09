@@ -1,7 +1,7 @@
 export const colors = {
   'light-base': '#FFF7F3',
   'light-text': '#332E2E',
-  'light-highlight1': '#e4f4e3',
+  'light-highlight1': '#a1d4b3',
   'light-highlight2': '#dedaf4',
   'dark-base': '#121220',
   'dark-text': '#F3F3F3',

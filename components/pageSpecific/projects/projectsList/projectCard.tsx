@@ -2,8 +2,7 @@ import { Heading } from '@/components/generic/typography/heading';
 import { Text } from '@/components/generic/typography/text';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BiLinkExternal } from 'react-icons/bi';
-import { BsFileEarmarkCode } from 'react-icons/bs';
+import { GoFileCode, GoGlobe } from 'react-icons/go';
 
 export type ProjectCardType = {
   imgSrc: string;
@@ -41,15 +40,15 @@ export const ProjectCard = ({
       </Link>
       <div className='flex flex-col justify-end items-end z-30'>
         <div className='flex items-center gap-4'>
-          <div className='flex items-center gap-1'>
+          <div className='flex items-bottom gap-1'>
             {webLink ? (
-              <Link href={webLink} target='_blank'>
-                <BiLinkExternal />
+              <Link href={webLink} target='_blank' className='hover:scale-105'>
+                <GoGlobe />
               </Link>
             ) : null}
             {codeLink ? (
-              <Link href={codeLink} target='_blank' className='hover:scale-110'>
-                <BsFileEarmarkCode />
+              <Link href={codeLink} target='_blank' className='hover:scale-105'>
+                <GoFileCode />
               </Link>
             ) : null}
           </div>
