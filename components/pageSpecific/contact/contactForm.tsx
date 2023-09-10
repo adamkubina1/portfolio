@@ -2,12 +2,8 @@
 
 import { Heading } from '@/components/generic/typography/heading';
 import { Undertext } from '@/components/generic/typography/underText';
-import {
-  customTextAreaTheme,
-  customTextInputTheme,
-} from '@/lib/style/customFormTheme';
 import { Label, TextInput, Textarea } from 'flowbite-react';
-import { FiMail } from 'react-icons/fi';
+import { SiMinutemailer } from 'react-icons/si';
 
 export const ContactForm = () => {
   return (
@@ -29,7 +25,7 @@ export const ContactForm = () => {
         type='submit'
       >
         Send!
-        <FiMail />
+        <SiMinutemailer />
       </button>
     </form>
   );
@@ -42,7 +38,7 @@ const EmailField = () => {
         <Label htmlFor='email' value='Your email' />
       </div>
       <TextInput
-        theme={customTextInputTheme}
+        className='[&>*>*]:dark:!bg-gray-800'
         id='email'
         name='email'
         placeholder='name@email.com'
@@ -61,8 +57,8 @@ const EmailBodyField = () => {
         <Label htmlFor='comment' value='Your message for me' />
       </div>
       <Textarea
-        theme={customTextAreaTheme}
         id='comment'
+        className='dark:!bg-gray-800'
         name='message'
         placeholder='Lorem ipsum'
         required

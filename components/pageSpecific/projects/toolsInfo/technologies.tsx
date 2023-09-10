@@ -30,7 +30,7 @@ export const Technologies = () => {
               ? `https://github-readme-stats-three-omega-17.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true&hide_title=true&text_color=332E2E`
               : 'https://github-readme-stats-three-omega-17.vercel.app/api/top-langs/?username=adamkubina1&layout=compact&theme=transparent&hide_border=true&hide_title=true&text_color=F3F3F3'
           }
-          className='h-[120px] '
+          className='h-[120px] md:w-[266.66px]'
           loading='lazy'
         />
       </a>
