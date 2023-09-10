@@ -9,6 +9,7 @@ export default function Blog() {
       direction={'both'}
       leftHref={'/projects'}
       rightHref={'/contact'}
+      title='Blog'
     >
       <PageHeading heading='BLOG' />
       <WritingInfo />

@@ -5,7 +5,12 @@ import { Timelines } from '@/components/pageSpecific/about/timelines/timelines';
 
 export default function About() {
   return (
-    <PageWrapper direction={'both'} leftHref={'/'} rightHref={'/projects'}>
+    <PageWrapper
+      direction={'both'}
+      leftHref={'/'}
+      rightHref={'/projects'}
+      title='About'
+    >
       <PageHeading heading='ABOUT' />
       <AboutInfo />
       <Timelines />

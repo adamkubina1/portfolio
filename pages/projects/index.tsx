@@ -5,7 +5,12 @@ import { ToolsInfo } from '@/components/pageSpecific/projects/toolsInfo/toolsInf
 
 export default function Projects() {
   return (
-    <PageWrapper direction={'both'} leftHref={'/about'} rightHref={'/contact'}>
+    <PageWrapper
+      direction={'both'}
+      leftHref={'/about'}
+      rightHref={'/contact'}
+      title='Projects'
+    >
       <PageHeading heading='PROJECTS' />
       <ToolsInfo />
       <ProjectsList />
