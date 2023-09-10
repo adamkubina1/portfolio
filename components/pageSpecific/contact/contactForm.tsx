@@ -1,8 +1,9 @@
 'use client';
 
+import { Heading } from '@/components/generic/typography/heading';
 import { Undertext } from '@/components/generic/typography/underText';
 import { Label, TextInput, Textarea } from 'flowbite-react';
-import { FiMail } from 'react-icons/fi';
+import { SiMinutemailer } from 'react-icons/si';
 
 export const ContactForm = () => {
   return (
@@ -11,17 +12,20 @@ export const ContactForm = () => {
       className='flex flex-col gap-2 items-center w-full'
       onSubmit={(e) => {}}
     >
-      <Undertext className='text-center'>Or contact me directly!</Undertext>
+      <div>
+        <Heading level={2}>Direct Message</Heading>
+        <Undertext className='text-center'>Contact me directly!</Undertext>
+      </div>
       <EmailField />
       <EmailBodyField />
       <button
         className={
-          'border-[0.5px] px-8 py-2 mt-2 rounded-xl flex flex-row items-center gap-2 shadow-sm hover:scale-105 hover:shadow-md'
+          'dark:border-gray-700 border-[0.5px] px-8 py-2 mt-2 rounded-xl flex flex-row items-center gap-2 shadow-sm hover:scale-105 hover:shadow-md'
         }
         type='submit'
       >
         Send!
-        <FiMail />
+        <SiMinutemailer className='text-light-highlight2 dark:text-dark-highlight2' />
       </button>
     </form>
   );
@@ -34,6 +38,7 @@ const EmailField = () => {
         <Label htmlFor='email' value='Your email' />
       </div>
       <TextInput
+        className='[&>*>*]:dark:!bg-gray-800'
         id='email'
         name='email'
         placeholder='name@email.com'
@@ -53,6 +58,7 @@ const EmailBodyField = () => {
       </div>
       <Textarea
         id='comment'
+        className='dark:!bg-gray-800'
         name='message'
         placeholder='Lorem ipsum'
         required

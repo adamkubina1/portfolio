@@ -33,7 +33,7 @@ const DesktopLink = ({
       <motion.div
         animate={
           link === activeLink?.replace('/', '')
-            ? { textShadow: '0px 3px 2px rgba(0, 0, 0, 0.4)' }
+            ? { textShadow: '0px 3px 3px' }
             : {}
         }
         transition={{
@@ -50,7 +50,7 @@ const DesktopLink = ({
               </>
             ) : null}
           </AnimatePresence>
-          {link}
+          {link.charAt(0).toUpperCase() + link.slice(1)}
         </Link>
       </motion.div>
     </li>

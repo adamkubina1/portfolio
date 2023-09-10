@@ -12,15 +12,15 @@ export const Hero = () => {
     <>
       <div className={'flex gap-2'}>
         <p className={'text-7xl font-bold'}>Hey! </p>
-        <div className={'pt-4 text-2xl'}>
+        <div className={'pt-2 text-2xl'}>
           <p className={' '}>My</p>
           <p>name is</p>
         </div>
       </div>
       <motion.h1
-        className={`text-9xl ${cevicheOne.className}`}
+        className={`text-9xl ${cevicheOne.className} bg-gradient-to-r from-light-highlight1 to-light-highlight2 dark:from-dark-highlight1 dark:to-dark-highlight2`}
         style={{
-          backgroundImage: colorFading.backgroundImage,
+          // backgroundImage: colorFading.backgroundImage,
           WebkitTextFillColor: 'transparent',
           WebkitBackgroundClip: 'text',
           backgroundSize: '400% 400%',
@@ -37,7 +37,7 @@ export const Hero = () => {
         Adam
       </motion.h1>
 
-      <p className={'text-2xl'}>and I am</p>
+      <p className={'text-2xl'}>and I am a</p>
       <p className='text-4xl'>developer</p>
     </>
   );

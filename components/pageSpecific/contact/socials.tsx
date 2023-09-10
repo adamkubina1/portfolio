@@ -13,7 +13,7 @@ export const Socials = () => {
   return (
     <div className='flex flex-col justify-start items-center mb-2'>
       <Heading level={2}>My Socials</Heading>
-      <Undertext className='mb-4 text-center'>
+      <Undertext className='mb-2 text-center'>
         Get in touch with me here
       </Undertext>
       <SocialsList />
@@ -24,62 +24,46 @@ export const Socials = () => {
 const SocialsList = () => {
   return (
     <div className='flex flex-row items-center gap-2'>
-      <Link
-        href={'https://www.linkedin.com/in/adam-kubina-dev/'}
-        target='_blank'
-        className='hover:scale-110'
-      >
-        <SocialLinkAnim
-          duration={animationTimeline.contact.socialLinkDuration}
-          delay={animationPhases.contact.phaseOne}
-        >
-          <FaLinkedin size={30} />
-        </SocialLinkAnim>
-      </Link>
-      <Link
-        href={'https://github.com/adamkubina1'}
-        target='_blank'
-        className='hover:scale-110'
-      >
-        <SocialLinkAnim
+      {SocialLinkData.map((link, i) => (
+        <SocialLink
+          key={i}
           duration={animationTimeline.contact.socialLinkDuration}
           delay={
             animationPhases.contact.phaseOne +
-            animationTimeline.contact.socialLinkDelay
+            animationTimeline.contact.socialLinkDelay * i
           }
-        >
-          <FaGithub size={30} />
-        </SocialLinkAnim>
-      </Link>
-      <Link href={'mail:adam.kubina@seznam.cz'} className='hover:scale-110'>
-        <SocialLinkAnim
-          duration={animationTimeline.contact.socialLinkDuration}
-          delay={
-            animationPhases.contact.phaseOne +
-            animationTimeline.contact.socialLinkDelay * 2
-          }
-        >
-          <MdAlternateEmail size={30} />
-        </SocialLinkAnim>
-      </Link>
+          href={link.href}
+          logo={link.logo}
+        />
+      ))}
     </div>
   );
 };
 
-//TODO refactor to this
+const SocialLinkData: Omit<SocialLinkType, 'delay' | 'duration'>[] = [
+  {
+    href: 'https://www.linkedin.com/in/adam-kubina-dev/',
+    logo: <FaLinkedin size={30} />,
+  },
+  { href: 'https://github.com/adamkubina1', logo: <FaGithub size={30} /> },
+  {
+    href: 'mailto: adam.kubina@seznam.cz',
+    logo: <MdAlternateEmail size={30} />,
+  },
+];
 
 type SocialLinkType = {
   href: string;
-  children: React.ReactNode;
   duration: number;
   delay: number;
+  logo: React.ReactNode;
 };
 
-const SocialLink = ({ href, children, duration, delay }: SocialLinkType) => {
+const SocialLink = ({ href, logo, duration, delay }: SocialLinkType) => {
   return (
     <Link href={href} target='_blank' className='hover:scale-110'>
       <SocialLinkAnim duration={duration} delay={delay}>
-        {children}
+        {logo}
       </SocialLinkAnim>
     </Link>
   );

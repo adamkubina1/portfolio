@@ -33,13 +33,13 @@ const ToolsInfoMobile = () => {
       className='items-center gap-x-4 gap-y-0 mb-2 mt-4 md:hidden pb-2'
     >
       <Tabs.Item
-        title='Tech stack'
+        title='Tech Stack'
         icon={() => <IoSchoolOutline className='mr-1' />}
       >
         <Technologies />
       </Tabs.Item>
       <Tabs.Item
-        title='Github stats'
+        title='Open Sourcing'
         icon={() => <FaLaptopCode className='mr-1' />}
       >
         <Github />

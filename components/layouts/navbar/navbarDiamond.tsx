@@ -49,12 +49,11 @@ const DiamondAnimation = ({ active }: { active: boolean }) => {
     <motion.div
       style={{
         aspectRatio: '1',
-        background: 'black',
         borderRadius: '61% 39% 16% 84% / 57% 72% 28% 43%',
-        backgroundImage: colorFading.backgroundImage,
+        // backgroundImage: colorFading.backgroundImage,
         backgroundSize: '400% 400%',
       }}
-      className={`relative w-1/2 ${
+      className={`relative w-1/2 bg-gradient-to-r from-light-highlight1 to-light-highlight2 dark:from-dark-highlight1 dark:to-dark-highlight2 ${
         active ? 'text-grey-shadow dark:text-purple-shadow' : 'text-transparent'
       }`}
       whileHover={{
@@ -66,15 +65,15 @@ const DiamondAnimation = ({ active }: { active: boolean }) => {
           ? {
               borderRadius: colorFading.borderRadius,
               backgroundPosition: colorFading.backgroundPosition,
-              x: [0, 10, 0, 5, 0, 5, 0],
-              y: [0, 10, 0, 2, 0, 2, 0],
+              x: [0, 8, 0, 5, 0, 5, 0],
+              y: [0, 8, 0, 2, 0, 2, 0],
               boxShadow: '0px 30px 20px -7px',
             }
           : {
               borderRadius: colorFading.borderRadius,
               backgroundPosition: colorFading.backgroundPosition,
-              x: [0, 10, 0, 5, 0, 5, 0],
-              y: [0, 10, 0, 2, 0, 2, 0],
+              x: [0, 8, 0, 5, 0, 5, 0],
+              y: [0, 8, 0, 2, 0, 2, 0],
             }
       }
       transition={{

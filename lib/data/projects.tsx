@@ -23,7 +23,7 @@ export const projects: ProjectCardType[] = [
     projectName: 'Etologie člověka',
     imgAlt: 'Etologie člověka web',
     imgSrc: '/imgs/projects/underConstruction.webp',
-    webLink: '/',
+    webLink: null,
 
     projectDesc: 'Project I am currently working on.',
     tags: [],

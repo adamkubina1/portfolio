@@ -24,6 +24,19 @@ const calcContactPhaseOne = () => {
   );
 };
 
+const calcMobileNavPhaseOne = () => {
+  return animationTimeline.mobileNav.fadeInDuration;
+};
+
+const calcMobileNavPhaseTwo = () => {
+  return (
+    calcMobileNavPhaseOne() +
+    animationTimeline.mobileNav.linkDuration +
+    animationTimeline.mobileNav.linkDelay *
+      animationTimeline.mobileNav.linkCount
+  );
+};
+
 /**
  * Animations go in phases, which have certain duration
  * Phase zero is universal for every page and is page transition
@@ -53,6 +66,13 @@ export const animationTimeline = {
     socialLinkDuration: 0.2,
     socialLinkCount: 3, //Manualy
   },
+  mobileNav: {
+    fadeInDuration: 0.5,
+    linkDuration: 0.15,
+    linkDelay: 0.1,
+    activeLinkDuration: 0.5,
+    linkCount: 3, //Manual
+  },
 };
 
 export const animationPhases = {
@@ -63,5 +83,9 @@ export const animationPhases = {
   },
   contact: {
     phaseOne: calcContactPhaseOne(),
+  },
+  mobileNav: {
+    phaseOne: calcMobileNavPhaseOne(),
+    phaseTwo: calcMobileNavPhaseTwo(),
   },
 };
