@@ -53,7 +53,7 @@ const DiamondAnimation = ({ active }: { active: boolean }) => {
         // backgroundImage: colorFading.backgroundImage,
         backgroundSize: '400% 400%',
       }}
-      className={`relative w-1/2 bg-gradient-to-tr from-red-600 to-blue-700 ${
+      className={`relative w-1/2 bg-gradient-to-r from-light-highlight1 to-light-highlight2 dark:from-dark-highlight1 dark:to-dark-highlight2 ${
         active ? 'text-grey-shadow dark:text-purple-shadow' : 'text-transparent'
       }`}
       whileHover={{

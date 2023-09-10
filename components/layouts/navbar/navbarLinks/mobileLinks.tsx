@@ -48,7 +48,7 @@ const MobileLinksMenu = ({
   return (
     <motion.div
       className={
-        'absolute top-0 left-0 bg-light-base dark:bg-dark-base flex justify-center pt-32'
+        'absolute top-0 left-0  bg-light-base dark:bg-dark-base !bg-opacity-[97%] flex justify-center pt-44'
       }
       key={'mobilelinks'}
       initial={{ opacity: 0, width: 0, height: 0 }}
@@ -89,7 +89,7 @@ const MobileLink = ({
 }) => {
   return (
     <motion.li
-      className={'py-4'}
+      className={'py-6'}
       initial={{ y: 10, opacity: 0 }}
       animate={
         link === activeLink?.replace('/', '')
@@ -131,7 +131,7 @@ const MobileLink = ({
               />
             </>
           ) : null}
-          {link}
+          {link.charAt(0).toUpperCase() + link.slice(1)}
         </div>
       </Link>
     </motion.li>

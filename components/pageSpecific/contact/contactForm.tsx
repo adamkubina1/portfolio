@@ -25,7 +25,7 @@ export const ContactForm = () => {
         type='submit'
       >
         Send!
-        <SiMinutemailer />
+        <SiMinutemailer className='text-light-highlight2 dark:text-dark-highlight2' />
       </button>
     </form>
   );

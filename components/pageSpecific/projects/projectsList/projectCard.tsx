@@ -54,7 +54,7 @@ export const ProjectCard = ({
           </div>
           <Heading level={3}>{projectName}</Heading>
         </div>
-        <div className=' -ml-20 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg w-60 md:w-72'>
+        <div className=' -ml-20 bg-gray-50 dark:bg-gray-800 p-2 rounded-lg w-60 md:w-72'>
           <Text className='text-sm'>{projectDesc}</Text>
         </div>
         <div className='flex flex-row mt-1 gap-1 -ml-20'>

@@ -21,7 +21,7 @@ export const Github = () => {
                 ? 'https://github-readme-streak-stats-liart.vercel.app/?user=adamkubina1&theme=transparent&hide_border=true&dates=9CA3AF&currStreakLabel=332E2E&sideLabels=332E2E&ring=A1D4B3&fire=A1D4B3&sideNums=332E2E&currStreakNum=332E2E'
                 : 'https://github-readme-streak-stats-liart.vercel.app/?user=adamkubina1&theme=transparent&hide_border=true&dates=9CA3AF&currStreakLabel=F3F3F3&sideLabels=F3F3F3&ring=579ABE&fire=579ABE&sideNums=F3F3F3&currStreakNum=F3F3F3'
             }
-            className='h-[160px] md:min-w-[336.39px]'
+            className='h-[160px] md:w-[336.39px] md:max-w-[336.39px]'
             loading='lazy'
           />
         </a>
