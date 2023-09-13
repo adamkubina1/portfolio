@@ -45,7 +45,7 @@ export default function Model() {
   }, [initialZoom]);
 
   return (
-    <div className='h-12'>
+    <div className='h-12 md:mt-6'>
       <Spline
         onLoad={onLoad}
         scene='https://prod.spline.design/xzCIRut57GSOeXjc/scene.splinecode'
