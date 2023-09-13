@@ -10,7 +10,11 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "@react-three/drei": "^9.83.9",
     "@react-three/fiber": "^8.13.6",
+    "@splinetool/r3f-spline": "^1.0.2",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.446",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
